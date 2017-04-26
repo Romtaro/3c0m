@@ -13,7 +13,7 @@ class PanelClientController extends Controller
 
     $content = $this
         ->get('templating')
-        ->render('ENTSiteBundle:Membre:panelmembre.html.twig', array('test' => "panel_client ouaich wesh ouèch !"));
+        ->render('ENTSiteBundle:Membre:panelmembre.html.twig', array('test' => "TEST Done !"));
 
       return new Response($content);
 

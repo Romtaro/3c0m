@@ -1,13 +1,14 @@
 {% extends 'base.menu.html.twig' %}
 
 {% block body %}
-  <h1>Hello
+  <h1>TEST de la variable "test" de la response($content)<br/>
+    __-|::PanelClientController.php :
 
-    {{ test|upper }}
-
+    <div style="color:green;background-color:#333;width:12%;">
+      <h4>
+        {{ test|upper }}
+      </h4>
+    </div>
   </h1>
 
-  <p>
-    Le Hello World est un grand classique en programmation. Il signifie énormément, car cela veut dire que vous avez réussi à exécuter le programme pour accomplir une tâche simple : afficher ce hello world !
-  </p>
 {% endblock %}
