@@ -1,5 +1,5 @@
 <?php
-namespace ENT\SiteBundle\Controller\;
+namespace ENT\SiteBundle\Controller;
 
 // N'oubliez pas ce use :
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
