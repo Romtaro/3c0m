@@ -24,4 +24,4 @@ su_pport:
 
 lo_out:
     path:     /logout
-    defaults: { _controller: ENTSiteBundle:Security:login }
+    defaults: { _controller: ENTSiteBundle:Security:logout }
