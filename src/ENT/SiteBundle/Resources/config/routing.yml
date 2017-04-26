@@ -12,7 +12,7 @@ lo_gin:
 
 panel_membre:
     path:     /panel/membre
-    defaults: { _controller: ENTSiteBundle:Panelclient:index }
+    defaults: { _controller: ENTSiteBundle:PanelClient:index }
 
 re_ssources:
     path:     /res
