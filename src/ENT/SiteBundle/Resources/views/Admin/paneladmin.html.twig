@@ -1,5 +1,5 @@
 {% extends 'base.menu.html.twig' %}
-
+{% block stylesheets %}{% endblock %}
 {% block body %}
   paneladmin
   <div style="color:rgb(10, 210, 10);background-color:#777;border-radius:5px;padding-left:50px;padding-right:50px;">
@@ -7,6 +7,28 @@
       {{ test|upper }}
     </h1>
   </div>
+  <div id="cssmenu" style="width:100%;margin-left:1%;">
+    <ul >
+      <li>
+        <a href="membre" style="height:30px;padding-top:3%;padding-bottom:1%;">
+          <i class="fa fa-fw fa-tachometer"></i>
+          Retour au tableau de bord (membre)</a>
+      </li>
+    </ul>
+  </div>
 
-  <a href="membre">Retour PanelMembre</a>
+  <div id="cssmenu" style="left:120%;width:100%;">
+    <ul>
+      <li>
+        <a href="gcompte" style="height:30px;padding-top:3%;padding-bottom:1%;">
+          <i class="fa fa-fw fa-tachometer"></i>
+          Gestion des comptes (gcompte)</a>
+      </li>
+      <li>
+        <a href="galert" style="height:30px;padding-top:3%;padding-bottom:1%;">
+          <i class="fa fa-fw fa-tachometer"></i>
+          Gestion des alertes (galert)</a>
+      </li>
+    </ul>
+  </div>
 {% endblock %}
