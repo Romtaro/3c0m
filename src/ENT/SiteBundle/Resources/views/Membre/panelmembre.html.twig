@@ -1,5 +1,5 @@
 {% extends 'base.menu.html.twig' %}
-
+{% block stylesheets %}{% endblock %}
 {% block body %}
   panelmembre
   <div style="color:rgb(10, 210, 10);background-color:#777;border-radius:5px;padding-left:50px;padding-right:50px;">
@@ -8,6 +8,13 @@
     </h1>
   </div>
 
-  <a href="admin">PanelAdmin</a>
-
+  <div id="cssmenu" style="width:100%;">
+    <ul >
+      <li>
+        <a href="admin" style="height:30px;padding-top:3%;padding-bottom:1%;">
+          <i class="fa fa-fw fa-tachometer"></i>
+          Retour au tableau de bord Admin (panelAdmin)</a>
+      </li>
+    </ul>
+  </div>
 {% endblock %}
