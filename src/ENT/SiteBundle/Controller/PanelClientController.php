@@ -11,7 +11,9 @@ class PanelClientController extends Controller
   public function indexAction()
   {
 
-
+    $content = $this
+        ->get('templating')
+        ->render('ENTSiteBundle:Membre:panelmembre.html.twig', array('test' => "panel_client ouaich wesh ouèch !"));
 
       return new Response($content);
 
