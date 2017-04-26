@@ -8,7 +8,7 @@ f_aq:
 
 lo_gin:
     path:     /login
-    defaults: { _controller: ENTSiteBundle:Login:index }
+    defaults: { _controller: ENTSiteBundle:Security:login }
 
 panel_membre:
     path:     /membre
