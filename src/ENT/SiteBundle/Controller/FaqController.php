@@ -10,7 +10,9 @@ class FaqController extends Controller
 
   public function indexAction()
   {
-
+    $content = $this
+        ->get('templating')
+        ->render('ENTSiteBundle:Membre:faq.html.twig', array('test' => "TEST Done !"));
 
 
       return new Response($content);

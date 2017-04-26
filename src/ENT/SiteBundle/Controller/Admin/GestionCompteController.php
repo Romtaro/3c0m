@@ -10,7 +10,9 @@ class GestionCompteController extends Controller
 
   public function indexAction()
   {
-
+    $content = $this
+        ->get('templating')
+        ->render('ENTSiteBundle:Admin:gestioncompte.html.twig', array('test' => "TEST Done !"));
 
 
       return new Response($content);

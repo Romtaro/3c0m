@@ -11,7 +11,7 @@ lo_gin:
     defaults: { _controller: ENTSiteBundle:Login:index }
 
 panel_membre:
-    path:     /panel/membre
+    path:     /membre
     defaults: { _controller: ENTSiteBundle:PanelClient:index }
 
 re_ssources:

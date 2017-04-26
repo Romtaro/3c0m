@@ -1,11 +1,11 @@
 panel_admin:
-    path:     /panel/admin
+    path:     /admin
     defaults: { _controller: ENTSiteBundle:Admin:GestionAlert:index }
 
 gestion_compte:
-    path:     /panel/gcompte
+    path:     /gcompte
     defaults: { _controller: ENTSiteBundle:Admin:GestionCompte:index }
 
 gestion_alert:
-    path:     /panel/galert
+    path:     /galert
     defaults: { _controller: ENTSiteBundle:Admin:PanelAdmin:index }

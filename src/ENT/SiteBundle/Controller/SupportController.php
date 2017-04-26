@@ -10,7 +10,9 @@ class SupportController extends Controller
 
   public function indexAction()
   {
-
+    $content = $this
+        ->get('templating')
+        ->render('ENTSiteBundle:Membre:support.html.twig', array('test' => "TEST Done !"));
 
 
       return new Response($content);

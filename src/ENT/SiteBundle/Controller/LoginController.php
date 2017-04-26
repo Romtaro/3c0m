@@ -10,7 +10,9 @@ class LoginController extends Controller
 
   public function indexAction()
   {
-
+    $content = $this
+        ->get('templating')
+        ->render('ENTSiteBundle:Membre:login.html.twig', array('test' => "TEST Done !"));
 
 
       return new Response($content);

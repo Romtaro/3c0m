@@ -10,7 +10,9 @@ class PanelAdminController extends Controller
 
   public function indexAction()
   {
-
+    $content = $this
+        ->get('templating')
+        ->render('ENTSiteBundle:Admin:paneladmin.html.twig', array('test' => "TEST Done !"));
 
 
       return new Response($content);
