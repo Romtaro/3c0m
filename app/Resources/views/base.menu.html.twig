@@ -15,7 +15,7 @@
       /* Starter CSS for Flyout Menu */
       #cssmenu {
         padding: 0;
-        margin: 0;
+        margin: -8px;
         border: 0;
         line-height: 1;
       }
@@ -77,8 +77,11 @@
       }
       /* Custom CSS Styles */
       #cssmenu {
-        width: 200px;
+        position: absolute;
+        float: left;
+        width: 14%;
         background: #333;
+        height: 600px;
         font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
         font-size: 12px;
         zoom: 1;
@@ -100,7 +103,7 @@
         text-transform: uppercase;
       }
       #cssmenu > ul {
-        width: 200px;
+        width: 100%;
       }
       #cssmenu ul ul {
         width: 200px;
@@ -204,6 +207,10 @@
         -webkit-border-radius: 3px 0 0 3px;
         -moz-border-radius: 3px 0 0 3px;
         border-radius: 3px 0 0 3px;
+      }
+      #view_right {
+        position: absolute;
+        left: 15%;
       }
 
     </style>
