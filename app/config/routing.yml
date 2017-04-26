@@ -1,0 +1,7 @@
+ent_site:
+    resource: "@ENTSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ent_site_admin:
+    resource: "@ENTSiteBundle/Resources/config/admin/routing.yml"
+    prefix:   /

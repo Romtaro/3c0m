@@ -1,0 +1,23 @@
+hello_the_world:
+    path:     /world/hello
+    defaults: { _controller: ENTSiteBundle:Advert:index }
+
+f_aq:
+    path:     /faq
+    defaults: { _controller: ENTSiteBundle:Faq:index }
+
+lo_gin:
+    path:     /login
+    defaults: { _controller: ENTSiteBundle:Login:index }
+
+panel_membre:
+    path:     /panel/membre
+    defaults: { _controller: ENTSiteBundle:Panelclient:index }
+
+re_ssources:
+    path:     /res
+    defaults: { _controller: ENTSiteBundle:Ressources:index }
+
+su_pport:
+    path:     /support
+    defaults: { _controller: ENTSiteBundle:Support:index }
