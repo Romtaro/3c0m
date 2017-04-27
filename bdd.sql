@@ -91,3 +91,24 @@ CREATE TABLE `membre` (
 
 INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `tel`, `civilite`, `ville`, `code_postal`, `adresse`, `statut`) VALUES
 (1, 'juju', 'soleil', 'Cottet', 'Julien', 'julien.cottet@gmail.com', 061122339900, 'm', 'Marseille', 13010, '300 rue de la chance', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `materiel`
+--
+
+CREATE TABLE `materiel`(
+'id_materiel' int(3) NOT NULL,
+'id_membre' int(3) NOT NULL,
+`id_cat`int(1) NOT NULL,
+`nom` varchar(40) NOT NULL,
+`number`varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `materiel`
+--
+
+INSERT INTO `materiel`(`id_materiel`, `id_membre`, 'id_cat', `nom`, `number`) VALUES
+(3, 1, 2, '1060 6Go', 'M0148');
