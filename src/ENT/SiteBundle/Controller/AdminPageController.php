@@ -20,6 +20,7 @@ class AdminPageController extends Controller
             ->render('ENTSiteBundle:Admin:paneladmin.html.twig', array(
               'eurt' => $content,
               'username' => $username,
+              'test' => 'TEST DONE !',
               ));
 
         return new Response($returnn);
