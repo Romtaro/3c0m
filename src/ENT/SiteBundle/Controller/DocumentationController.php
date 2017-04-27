@@ -8,27 +8,30 @@ use Symfony\Component\HttpFoundation\Request;
 class DocumentationController extends Controller
 {
 
-  public function viewAction($idDocumentation)
+  public function viewAction($id)
   {
-    var_dump($idDocumentation);
+    //var_dump($id);
      // On récupère le repository
      $repository = $this->getDoctrine()
        ->getManager()
        ->getRepository('ENTSiteBundle:Documentation');
-var_dump($repository);
+       //var_dump($repository);
      // On récupère l'entité correspondante à l'id $id
-     $documentation = $repository->find($idDocumentation);
-
+     $documentation = $repository->find($id);
+     //var_dump($documentation);
 
      // $advert est donc une instance de OC\PlatformBundle\Entity\Advert
      // ou null si l'id $id  n'existe pas, d'où ce if :
      if (null === $documentation) {
-       throw new NotFoundHttpException("L'annonce d'id ".$idDocumentation." n'existe pas.");
+       throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
      }
+
+     $nom = $documentation->getNom();
 
      // Le render ne change pas, on passait avant un tableau, maintenant un objet
      return $this->render('ENTSiteBundle:Membre:ressources.html.twig', array(
-       'documentation' => $documentation
+       'documentation' => $nom,
+       'test' => 'caca',
      ));
    }
 }

@@ -109,12 +109,6 @@ class User implements UserInterface, \Serializable
      */
     private $isActive;
 
-    /**
-     * Get id
-     *
-     * @return int
-     */
-
     public function __construct()
     {
         $this->isActive = true;

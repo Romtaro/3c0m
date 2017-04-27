@@ -13,11 +13,11 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  */
 class Documentation
 {
-  
+
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="id_documentation", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -44,19 +44,19 @@ class Documentation
      */
     private $taille;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="data_enregistrement", type="date")
-     */
-    private $dataEnregistrement;
+  //  /**
+  //   * @var \DateTime
+  //   *
+  //   * @ORM\Column(name="data_enregistrement", type="datetime")
+  //   */
+  //  private $dataEnregistrement;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id_documentation", type="smallint", unique=true)
-     */
-    private $idDocumentation;
+//    /**
+  //   * @var int
+  //   *
+  //   * @ORM\Column(name="dfnmgj", type="smallint", unique=true)
+  //   */
+  //  private $idDocumentation;
 
 
     /**
