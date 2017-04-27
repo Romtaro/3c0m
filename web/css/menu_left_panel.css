@@ -9,10 +9,6 @@
   line-height: 1;
 }
 
-.far {
-  content: '\f1cd';
-}
-
 #cssmenu ul, #cssmenu ul li, #cssmenu ul ul {
   list-style: none;
   margin: 0;
@@ -91,6 +87,7 @@
   font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
   font-size: 12px;
   zoom: 1;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 #cssmenu:before {
@@ -248,4 +245,18 @@
 #view_right {
   position: absolute;
   left: 15%;
+  background-color: white;
+}
+
+#bg {
+  width: 100%;
+  height: 500px;
+}
+
+#test {
+  color: rgb(10, 210, 10);
+  background-color: #777;
+  border-radius: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
