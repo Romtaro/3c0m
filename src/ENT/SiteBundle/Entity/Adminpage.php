@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  * @ORM\Table(name="membre")
  * @ORM\Entity(repositoryClass="ENT\SiteBundle\Repository\AdminpageRepository")
  */
-class Documentation
+class Adminpage
 {
 
     /**
