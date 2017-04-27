@@ -16,7 +16,7 @@
       {{ test|upper }}
     </h1>
   </div>
-  {##}
-  <div class="dropzone my-dropzone" id="form_snippet_image" action="{{ path('ajax_snippet_image_send') }}">
+  {# {{ path('ajax_snippet_image_send') }} #}
+  <div class="dropzone my-dropzone" id="form_snippet_image" action="">
     <script type="text/javascript" src="{{ asset('js/dropzone.js') }}"></script>
   {% endblock %}
