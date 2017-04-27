@@ -19,7 +19,7 @@ class DocumentationController extends Controller
      // On récupère l'entité correspondante à l'id $id
      $documentation = $repository->find($id);
      //var_dump($documentation);
-     $test = "TEST DONE !";
+     $error = "TEST DONE !";
      // $advert est donc une instance de OC\PlatformBundle\Entity\Advert
      // ou null si l'id $id  n'existe pas, d'où ce if :
      if (null === $documentation) {
@@ -41,12 +41,7 @@ class DocumentationController extends Controller
        'test' => $error,
      ));
      }
-        return $this->render('ENTSiteBundle:Membre:ressources.html.twig', array(
-          'id_doc' => "null",
-          'id_cat' => "null",
-          'nom' => "null",
-          'taille' => "null",
-          //'data_enrg' => $data_enrg,
+        return $this->render('ENTSiteBundle:Membre:ressources_error.html.twig', array(
           'test' => $error,
         ));
     }
