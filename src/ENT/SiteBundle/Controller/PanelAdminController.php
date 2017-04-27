@@ -14,12 +14,12 @@ class PanelAdminController extends Controller
       ->getRepository('ENTSiteBundle:Adminpage');
       //var_dump($repository);
     // On récupère l'entité correspondante à l'id $id
-    $documentation = $repository->find($id);
+  //  $documentation = $repository->find($id);
     //var_dump($documentation);
 
     $content = $this
         ->get('templating')
-        ->render('ENTSiteBundle:Admin:paneladmin.html.twig', array('test' => "TEST Done !"));
+        ->render('ENTSiteBundle:Admin:paneladmin.html.twig', array('test' => "TEST Done ! (test)", 'username' => "| Et ta maman (username)", 'eurt' => "PanelAdminController (eurt)"));
 
 
         return new Response($content);
