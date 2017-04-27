@@ -33,7 +33,7 @@ CREATE TABLE `documentation` (
   `id_cat` int(1) DEFAULT NULL,
   `nom` varchar(40) NOT NULL,
   `taille` int(5) NOT NULL,
-  `date_enregistrement` datetime NOT NULL
+  `date_enregistrement` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -54,7 +54,7 @@ CREATE TABLE `logiciels` (
   `id_cat` int(1) DEFAULT NULL,
   `nom` varchar(40) NOT NULL,
   `taille` int(5) NOT NULL,
-  `date_enregistrement` datetime NOT NULL
+  `date_enregistrement` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

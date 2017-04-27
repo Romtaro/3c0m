@@ -26,11 +26,20 @@ class DocumentationController extends Controller
        throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
      }
 
+
+     $id_doc = $documentation->getId();
+     $id_cat = $documentation->getIdCat();
      $nom = $documentation->getNom();
+     $taille = $documentation->getTaille();
+    // $date_enrg = $documentation->getDataEnregistrement();
 
      // Le render ne change pas, on passait avant un tableau, maintenant un objet
      return $this->render('ENTSiteBundle:Membre:ressources.html.twig', array(
-       'documentation' => $nom,
+       'id_doc' => $id_doc,
+       'id_cat' => $id_cat,
+       'nom' => $nom,
+       'taille' => $taille,
+       //'data_enrg' => $data_enrg,
        'test' => 'caca',
      ));
    }
