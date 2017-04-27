@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="membre")
  * @ORM\Entity(repositoryClass="ENT\SiteBundle\Repository\MembreRepository")
  */
-class Membre
+class Membre extends BaseUser
 {
     /**
      * @var int
@@ -404,4 +404,3 @@ class Membre
         return $this->statut;
     }
 }
-
