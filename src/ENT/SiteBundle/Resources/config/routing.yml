@@ -16,7 +16,7 @@ panel_membre:
 
 re_ssources:
     path:     /res
-    defaults: { _controller: ENTSiteBundle:Ressources:index }
+    defaults: { _controller: ENTSiteBundle:Ressources:index2 }
 
 re_sssources:
     path:     /res/{id}
