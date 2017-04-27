@@ -4,6 +4,7 @@ namespace ENT\SiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Http\Authentication;
 
 class SecurityController extends Controller
 {
@@ -21,7 +22,7 @@ class SecurityController extends Controller
     $content = $this
             ->get('templating')
             ->render('ENTSiteBundle:Membre:login.html.twig', array(
-                    'last_username' => "Draden",
+                    'last_username' => $lastUsername,
                     'no_connect' => "Vous n'êtes pas connecté !",
                     'error'         => $error,
                 ));
