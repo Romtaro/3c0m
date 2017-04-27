@@ -1,11 +1,10 @@
 {% extends 'base.menu.html.twig' %}
 {% block stylesheets %}{% endblock %}
 {% block body %}
-  paneladmin
+  <strong>{{ eurt }}{{ username }}</strong>
+  | paneladmin
   <div style="color:rgb(10, 210, 10);background-color:#777;border-radius:5px;padding-left:50px;padding-right:50px;">
-    <h1>
-      {{ test|upper }}
-    </h1>
+    <h1></h1>
   </div>
   <div id="cssmenu" style="width:100%;margin-left:1%;">
     <ul >
@@ -17,7 +16,7 @@
     </ul>
   </div>
 
-  <div id="cssmenu" style="left:120%;width:100%;">
+  <div id="cssmenu" style="position:absolute;left:25%;width:100%;">
     <ul>
       <li>
         <a href="gcompte" style="height:30px;padding-top:3%;padding-bottom:1%;">

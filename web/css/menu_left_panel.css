@@ -112,7 +112,7 @@
 }
 
 #cssmenu>ul {
-  width: 100%;
+  width: auto;
   background: #333;
 }
 
@@ -245,11 +245,12 @@
 #view_right {
   position: absolute;
   left: 15%;
+  width: 84%;
   background-color: white;
 }
 
 #bg {
-  width: 100%;
+  width: 90%;
   height: 500px;
 }
 

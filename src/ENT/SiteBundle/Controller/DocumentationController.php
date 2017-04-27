@@ -7,10 +7,9 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DocumentationController extends Controller
 {
-
-  public function viewAction($id)
-  {
-    //var_dump($id);
+    public function viewAction($id)
+    {
+        //var_dump($id);
      // On récupère le repository
      $repository = $this->getDoctrine()
        ->getManager()
@@ -23,14 +22,14 @@ class DocumentationController extends Controller
      // $advert est donc une instance de OC\PlatformBundle\Entity\Advert
      // ou null si l'id $id  n'existe pas, d'où ce if :
      if (null === $documentation) {
-       throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
+         throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
      }
 
 
-     $id_doc = $documentation->getId();
-     $id_cat = $documentation->getIdCat();
-     $nom = $documentation->getNom();
-     $taille = $documentation->getTaille();
+        $id_doc = $documentation->getId();
+        $id_cat = $documentation->getIdCat();
+        $nom = $documentation->getNom();
+        $taille = $documentation->getTaille();
     // $date_enrg = $documentation->getDataEnregistrement();
 
      // Le render ne change pas, on passait avant un tableau, maintenant un objet
@@ -42,5 +41,5 @@ class DocumentationController extends Controller
        //'data_enrg' => $data_enrg,
        'test' => 'caca',
      ));
-   }
+    }
 }

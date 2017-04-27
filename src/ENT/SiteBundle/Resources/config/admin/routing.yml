@@ -2,6 +2,10 @@ panel_admin:
     path:     /admin
     defaults: { _controller: ENTSiteBundle:PanelAdmin:index }
 
+true_connect_admin:
+    path:     /admin/{id}
+    defaults: { _controller: ENTSiteBundle:AdminPage:admin }
+
 gestion_compte:
     path:     /gcompte
     defaults: { _controller: ENTSiteBundle:GestionCompte:index }

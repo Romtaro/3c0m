@@ -7,17 +7,21 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PanelAdminController extends Controller
 {
+    public function indexAction()
+    {
+        $repository = $this->getDoctrine()
+      ->getManager()
+      ->getRepository('ENTSiteBundle:Adminpage');
+      //var_dump($repository);
+    // On récupère l'entité correspondante à l'id $id
+    $documentation = $repository->find($id);
+    //var_dump($documentation);
 
-  public function indexAction()
-  {
     $content = $this
         ->get('templating')
         ->render('ENTSiteBundle:Admin:paneladmin.html.twig', array('test' => "TEST Done !"));
 
 
-      return new Response($content);
-
-  }
-
-
+        return new Response($content);
+    }
 }
