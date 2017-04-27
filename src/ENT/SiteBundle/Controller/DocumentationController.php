@@ -4,6 +4,7 @@ namespace ENT\SiteBundle\Controller;
 use ENT\SiteBundle\Entity\Documentation;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class DocumentationController extends Controller
 {
@@ -18,18 +19,16 @@ class DocumentationController extends Controller
      // On récupère l'entité correspondante à l'id $id
      $documentation = $repository->find($id);
      //var_dump($documentation);
-
+     $test = "TEST DONE !";
      // $advert est donc une instance de OC\PlatformBundle\Entity\Advert
      // ou null si l'id $id  n'existe pas, d'où ce if :
      if (null === $documentation) {
-         throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
-     }
-
-
-        $id_doc = $documentation->getId();
-        $id_cat = $documentation->getIdCat();
-        $nom = $documentation->getNom();
-        $taille = $documentation->getTaille();
+         $error = "L'annonce d'id ".$id." n'existe pas.";
+     } else {
+         $id_doc = $documentation->getId();
+         $id_cat = $documentation->getIdCat();
+         $nom = $documentation->getNom();
+         $taille = $documentation->getTaille();
     // $date_enrg = $documentation->getDataEnregistrement();
 
      // Le render ne change pas, on passait avant un tableau, maintenant un objet
@@ -39,7 +38,16 @@ class DocumentationController extends Controller
        'nom' => $nom,
        'taille' => $taille,
        //'data_enrg' => $data_enrg,
-       'test' => 'caca',
+       'test' => $error,
      ));
+     }
+        return $this->render('ENTSiteBundle:Membre:ressources.html.twig', array(
+          'id_doc' => "null",
+          'id_cat' => "null",
+          'nom' => "null",
+          'taille' => "null",
+          //'data_enrg' => $data_enrg,
+          'test' => $error,
+        ));
     }
 }

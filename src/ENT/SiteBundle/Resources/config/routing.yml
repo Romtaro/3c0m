@@ -22,6 +22,10 @@ re_sssources:
     path:     /res/{id}
     defaults: { _controller: ENTSiteBundle:Documentation:view }
 
+redirect_re_ssources:
+    path:     /res/res
+    defaults: { _controller: ENTSiteBundle:Ressources:index }
+
 su_pport:
     path:     /support
     defaults: { _controller: ENTSiteBundle:Support:index }
