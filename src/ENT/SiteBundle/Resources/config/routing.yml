@@ -18,6 +18,10 @@ re_ssources:
     path:     /res
     defaults: { _controller: ENTSiteBundle:Ressources:index }
 
+re_sssources:
+    path:     /res/{idDocumentation}
+    defaults: { _controller: ENTSiteBundle:Documentation:view }
+
 su_pport:
     path:     /support
     defaults: { _controller: ENTSiteBundle:Support:index }
