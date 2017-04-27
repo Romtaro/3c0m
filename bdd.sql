@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 -- Base de données :  `bdd`
 --
 CREATE DATABASE IF NOT EXISTS `bdd` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `bdd`;
+  USE `bdd`;
 
 -- --------------------------------------------------------
 
@@ -41,7 +41,7 @@ CREATE TABLE `documentation` (
 --
 
 INSERT INTO `documentation` (`id_documentation`, `id_cat`, `nom`,`taille`, `date_enregistrement`) VALUES
-(1, 2, `Exemple_doc.pdf`, 642, '1992-07-10 14:44:46');
+(1, 2, 'Exemple_doc.pdf', 642, '1992-07-10 14:44:46');
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,7 @@ CREATE TABLE `logiciels` (
 --
 
 INSERT INTO `logiciels` (`id_logiciels`, `id_cat`, `nom`, `taille`, `date_enregistrement`) VALUES
-(1, 2, `exemple_log.exe`, 1145, '1992-07-10 18:48:42');
+(1, 2, 'exemple_log.exe', 1145, '1992-07-10 18:48:42');
 
 -- --------------------------------------------------------
 
@@ -99,16 +99,16 @@ INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `t
 --
 
 CREATE TABLE `materiel`(
-'id_materiel' int(3) NOT NULL,
-'id_membre' int(3) NOT NULL,
-`id_cat`int(1) NOT NULL,
+`id_materiel` int(3) NOT NULL,
+`id_membre` int(3) NOT NULL,
+`id_cat` int(1) NOT NULL,
 `nom` varchar(40) NOT NULL,
-`number`varchar(20) NOT NULL
+`number` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `materiel`
 --
 
-INSERT INTO `materiel`(`id_materiel`, `id_membre`, 'id_cat', `nom`, `number`) VALUES
+INSERT INTO `materiel` (`id_materiel`, `id_membre`, `id_cat`, `nom`, `number`) VALUES
 (3, 1, 2, '1060 6Go', 'M0148');
