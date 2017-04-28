@@ -130,11 +130,11 @@
 }
 
 #cssmenu>ul>li.active a {
-  background: #1b9bff;
+  background: green;
 }
 
 #cssmenu>ul>li a:hover, #cssmenu>ul>li:hover a {
-  background: #1b9bff;
+  color: green;
 }
 
 #cssmenu li {
@@ -178,7 +178,7 @@
 }
 
 #cssmenu ul ul a:hover {
-  color: #fff;
+  color: green;
 }
 
 #cssmenu ul ul li {
@@ -187,7 +187,7 @@
 
 #cssmenu ul ul li:hover>a {
   background: #4eb1ff;
-  color: #fff;
+  color: green;
 }
 
 #cssmenu.align-right>ul>li>a {
@@ -273,6 +273,7 @@
 
 form.bloggerr {
   font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 form.bloggerr div {
@@ -310,9 +311,18 @@ form.bloggerr input[type="submit"] {
   line-height: 26px;
   font-size: 20px;
   min-height: 26px;
+  text-transform: uppercase;
 }
 
 form.bloggerr ul li {
   color: #ff0000;
   margin-bottom: 5px;
+}
+
+.lastuser {
+  color: rgb(10, 210, 10);
+  background-color: #777;
+  border-radius: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
