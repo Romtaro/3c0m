@@ -8,16 +8,20 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 class ContactType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-      ->add('name', TextType::class)
-      ->add('email', EmailType::class)
-      ->add('subject', TextType::class)
-      ->add('body', TextareaType::class);
+      ->add('name', TextType::class, array( 'attr' => array('placeholder' => 'Saisir votre nom',),
+                                            'required' => false,
+                                            'trim' => true,
+                                              ))
+      ->add('email', EmailType::class, array( 'attr' => array('placeholder' => 'Saisir votre email')))
+      ->add('subject', TextType::class, array( 'attr' => array('placeholder' => 'Saisir votre sujet')))
+      ->add('body', TextareaType::class, array( 'attr' => array('placeholder' => 'Saisir votre message')));
     }
 
     public function getName()
@@ -25,7 +29,7 @@ class ContactType extends AbstractType
         return 'contact';
     }
 
-    public function configureOptions(OptionResolver $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array( 'data_class' => 'ENT\SiteBundle\Entity\Contact'));
     }

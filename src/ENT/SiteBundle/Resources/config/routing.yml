@@ -8,7 +8,9 @@ f_aq:
 
 lo_gin:
     path:     /login
-    defaults: { _controller: ENTSiteBundle:Security:login }
+    defaults: { _controller: ENTSiteBundle:Login:connexion }
+    requirements:
+        _method: GET|POST
 
 panel_membre:
     path:     /membre

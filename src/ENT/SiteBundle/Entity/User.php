@@ -6,12 +6,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- * @ORM\Table(name="app_users")
+ * @ORM\Table(name="membre")
  * @ORM\Entity(repositoryClass="ENT\SiteBundle\Repository\UserRepository")
  */
 class User implements UserInterface, \Serializable
 {
-  /**
+    /**
    * @var int
    *
    * @ORM\Column(name="id", type="integer")
@@ -157,7 +157,7 @@ class User implements UserInterface, \Serializable
     /** @see \Serializable::unserialize() */
     public function unserialize($serialized)
     {
-        list (
+        list(
             $this->id,
             $this->username,
             $this->password,
