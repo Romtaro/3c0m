@@ -2,18 +2,16 @@
 <html>
   <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/menu_left_panel.css') }}">
+
     <title>
       {% block title %}
         3c0m - SAV
       {% endblock %}
     </title>
-
-    {% block javascripts %}{% endblock %}
-
+    <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/menu_left_panel.css') }}">
     {% block stylesheets %}{% endblock %}
-
+    {% block javascripts %}{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('icon.ico') }}"/>
   </head>
   <body>
