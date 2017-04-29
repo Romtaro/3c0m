@@ -31,24 +31,23 @@ class LoginController extends Controller
     public function connexionAction(Request $request)
     {
         $contact = new Contact();
-        $formFactory = Forms::createFormFactory();
-        $form = $formFactory->createBuilder()
-        ->add('name', 'Symfony\Component\Form\Extension\Core\Type\TextType')
-        ->add('email', 'Symfony\Component\Form\Extension\Core\Type\EmailType')
-        ->add('mdp', 'Symfony\Component\Form\Extension\Core\Type\PasswordType')
-        ->add('submit', 'Symfony\Component\Form\Extension\Core\Type\SubmitType')
-
-      //   ->get('form.factory')
-                  //   ->create(ContactType::class, $contact);
-                     ->getForm();
+        //$formFactory = Forms::createFormFactory();
+        $form = $this->get('form.factory')
+                     ->create(ContactType::class, $contact);
+      //   ->createBuilder()
+       //  ->add('name', 'Symfony\Component\Form\Extension\Core\Type\TextType')
+       //  ->add('email', 'Symfony\Component\Form\Extension\Core\Type\EmailType')
+       //  ->add('mdp', 'Symfony\Component\Form\Extension\Core\Type\PasswordType')
+       //  ->add('submit', 'Symfony\Component\Form\Extension\Core\Type\SubmitType')
+                  //   ->getForm();
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
-            return $this->redirect($this->generateUrl('lo_gin'));
+            return $this->redirect($this->generateUrl('panel_membre'));
         }
         return $this->render('ENTSiteBundle:Membre:login.html.twig', array('form' => $form->createView()));
-  //      $content = $this
-  //      ->get('templating')
-  //      ->render('ENTSiteBundle:Membre:login.html.twig', array('test' => "TEST Done !"));
-    //    return new Response($content);
+    //    $content = $this
+    //  ->get('templating')
+    //  ->render('ENTSiteBundle:Membre:login.html.twig', array('test' => "TEST Done !"));
+    //   return new Response($content);
     }
 }

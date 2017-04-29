@@ -7,113 +7,402 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
- * Documentation
+ * Contact
  *
  * @ORM\Table(name="membre")
  * @ORM\Entity(repositoryClass="ENT\SiteBundle\Repository\ContactRepository")
  */
 class Contact
 {
-    private $name;
-    private $email;
-    private $subject;
-    private $body;
-
-
-
     /**
-     * Get the value of Documentation
-     *
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
+   * @var int
+   *
+   * @ORM\Column(name="id", type="integer")
+   * @ORM\Id
+   * @ORM\GeneratedValue(strategy="AUTO")
+   */
+  private $id;
 
-    /**
-     * Set the value of Documentation
-     *
-     * @param mixed name
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
+  /**
+   * @var int
+   *
+   * @ORM\Column(name="id_membre", type="smallint", unique=true)
+   */
+  private $idMembre;
 
-        return $this;
-    }
+  /**
+   * @var string
+   *
+   * @ORM\Column(name="pseudo", type="string", length=20, unique=true)
+   */
+  private $pseudo;
 
-    /**
-     * Get the value of Email
-     *
-     * @return mixed
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
+  /**
+   * @var string
+   *
+   * @ORM\Column(name="mdp", type="string", length=32)
+   */
+  private $mdp;
 
-    /**
-     * Set the value of Email
-     *
-     * @param mixed email
-     *
-     * @return self
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
+  /**
+   * @var string
+   *
+   * @ORM\Column(name="nom", type="string", length=20)
+   */
+  private $nom;
 
-        return $this;
-    }
+  /**
+   * @var string
+   *
+   * @ORM\Column(name="prenom", type="string", length=20)
+   */
+  private $prenom;
 
-    /**
-     * Get the value of Subject
-     *
-     * @return mixed
-     */
-    public function getSubject()
-    {
-        return $this->subject;
-    }
+  /**
+   * @var string
+   *
+   * @ORM\Column(name="email", type="string", length=50, unique=true)
+   */
+  private $email;
 
-    /**
-     * Set the value of Subject
-     *
-     * @param mixed subject
-     *
-     * @return self
-     */
-    public function setSubject($subject)
-    {
-        $this->subject = $subject;
+  /**
+   * @var int
+   *
+   * @ORM\Column(name="tel", type="bigint", unique=true)
+   */
+  private $tel;
 
-        return $this;
-    }
+  /**
+   * @var string
+   *
+   * @ORM\Column(name="civilite", type="string", length=20)
+   */
+  private $civilite;
 
-    /**
-     * Get the value of Body
-     *
-     * @return mixed
-     */
-    public function getBody()
-    {
-        return $this->body;
-    }
+  /**
+   * @var string
+   *
+   * @ORM\Column(name="ville", type="string", length=40)
+   */
+  private $ville;
 
-    /**
-     * Set the value of Body
-     *
-     * @param mixed body
-     *
-     * @return self
-     */
-    public function setBody($body)
-    {
-        $this->body = $body;
+  /**
+   * @var int
+   *
+   * @ORM\Column(name="code_postal", type="bigint")
+   */
+  private $codePostal;
 
-        return $this;
-    }
+  /**
+   * @var string
+   *
+   * @ORM\Column(name="adresse", type="string", length=100)
+   */
+  private $adresse;
+
+  /**
+   * @var int
+   *
+   * @ORM\Column(name="statut", type="smallint")
+   */
+  private $statut;
+
+
+  /**
+   * Get id
+   *
+   * @return int
+   */
+  public function getId()
+  {
+      return $this->id;
+  }
+
+  /**
+   * Set idMembre
+   *
+   * @param integer $idMembre
+   *
+   * @return Membre
+   */
+  public function setIdMembre($idMembre)
+  {
+      $this->idMembre = $idMembre;
+
+      return $this;
+  }
+
+  /**
+   * Get idMembre
+   *
+   * @return int
+   */
+  public function getIdMembre()
+  {
+      return $this->idMembre;
+  }
+
+  /**
+   * Set pseudo
+   *
+   * @param string $pseudo
+   *
+   * @return Membre
+   */
+  public function setPseudo($pseudo)
+  {
+      $this->pseudo = $pseudo;
+
+      return $this;
+  }
+
+  /**
+   * Get pseudo
+   *
+   * @return string
+   */
+  public function getPseudo()
+  {
+      return $this->pseudo;
+  }
+
+  /**
+   * Set mdp
+   *
+   * @param string $mdp
+   *
+   * @return Membre
+   */
+  public function setMdp($mdp)
+  {
+      $this->mdp = $mdp;
+
+      return $this;
+  }
+
+  /**
+   * Get mdp
+   *
+   * @return string
+   */
+  public function getMdp()
+  {
+      return $this->mdp;
+  }
+
+  /**
+   * Set nom
+   *
+   * @param string $nom
+   *
+   * @return Membre
+   */
+  public function setNom($nom)
+  {
+      $this->nom = $nom;
+
+      return $this;
+  }
+
+  /**
+   * Get nom
+   *
+   * @return string
+   */
+  public function getNom()
+  {
+      return $this->nom;
+  }
+
+  /**
+   * Set prenom
+   *
+   * @param string $prenom
+   *
+   * @return Membre
+   */
+  public function setPrenom($prenom)
+  {
+      $this->prenom = $prenom;
+
+      return $this;
+  }
+
+  /**
+   * Get prenom
+   *
+   * @return string
+   */
+  public function getPrenom()
+  {
+      return $this->prenom;
+  }
+
+  /**
+   * Set email
+   *
+   * @param string $email
+   *
+   * @return Membre
+   */
+  public function setEmail($email)
+  {
+      $this->email = $email;
+
+      return $this;
+  }
+
+  /**
+   * Get email
+   *
+   * @return string
+   */
+  public function getEmail()
+  {
+      return $this->email;
+  }
+
+  /**
+   * Set tel
+   *
+   * @param integer $tel
+   *
+   * @return Membre
+   */
+  public function setTel($tel)
+  {
+      $this->tel = $tel;
+
+      return $this;
+  }
+
+  /**
+   * Get tel
+   *
+   * @return int
+   */
+  public function getTel()
+  {
+      return $this->tel;
+  }
+
+  /**
+   * Set civilite
+   *
+   * @param string $civilite
+   *
+   * @return Membre
+   */
+  public function setCivilite($civilite)
+  {
+      $this->civilite = $civilite;
+
+      return $this;
+  }
+
+  /**
+   * Get civilite
+   *
+   * @return string
+   */
+  public function getCivilite()
+  {
+      return $this->civilite;
+  }
+
+  /**
+   * Set ville
+   *
+   * @param string $ville
+   *
+   * @return Membre
+   */
+  public function setVille($ville)
+  {
+      $this->ville = $ville;
+
+      return $this;
+  }
+
+  /**
+   * Get ville
+   *
+   * @return string
+   */
+  public function getVille()
+  {
+      return $this->ville;
+  }
+
+  /**
+   * Set codePostal
+   *
+   * @param integer $codePostal
+   *
+   * @return Membre
+   */
+  public function setCodePostal($codePostal)
+  {
+      $this->codePostal = $codePostal;
+
+      return $this;
+  }
+
+  /**
+   * Get codePostal
+   *
+   * @return int
+   */
+  public function getCodePostal()
+  {
+      return $this->codePostal;
+  }
+
+  /**
+   * Set adresse
+   *
+   * @param string $adresse
+   *
+   * @return Membre
+   */
+  public function setAdresse($adresse)
+  {
+      $this->adresse = $adresse;
+
+      return $this;
+  }
+
+  /**
+   * Get adresse
+   *
+   * @return string
+   */
+  public function getAdresse()
+  {
+      return $this->adresse;
+  }
+
+  /**
+   * Set statut
+   *
+   * @param integer $statut
+   *
+   * @return Membre
+   */
+  public function setStatut($statut)
+  {
+      $this->statut = $statut;
+
+      return $this;
+  }
+
+  /**
+   * Get statut
+   *
+   * @return int
+   */
+  public function getStatut()
+  {
+      return $this->statut;
+  }
 }
