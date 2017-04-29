@@ -17,12 +17,12 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-      ->add('pseudo', TextType::class, array( 'attr' => array('placeholder' => 'Saisir votre pseudo',),
+      ->add('pseudo', TextType::class, array( 'attr' => array('placeholder' => 'juju', 'value' => '',),
                                             'required' => false,
                                             'trim' => true,
                                               ))
-      ->add('email', EmailType::class, array( 'attr' => array('placeholder' => 'Saisir votre email')))
-      ->add('mdp', PasswordType::class, array( 'attr' => array('value' => 'Saisir votre sujet'),
+      ->add('email', EmailType::class, array( 'attr' => array('placeholder' => 'julien.cottet@gmail.com', 'value' => '',)))
+      ->add('mdp', PasswordType::class, array( 'attr' => array('value' => 'soleil'),
                                           ))
       ->add('submit', SubmitType::class, array( 'attr' => array('label' => 'Connexion')));
     }

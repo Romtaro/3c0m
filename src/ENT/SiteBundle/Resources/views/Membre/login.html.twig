@@ -21,14 +21,16 @@
   {{ form_row(form.pseudo, {'label': 'Pseudo' }) }}
   {{ form_row(form.email) }}
   {{ form_row(form.mdp, {'label': 'Mot de passe', 'attr' : { 'type' : 'password' }}) }}
-
   {#   {{ form_row(form.subject) }}
   {{ form_row(form.body) }}#}
   {{ form_row(form.submit, { 'label': 'Connexion' }) }}
 
+  pseudo__: juju<br/>
+  email___: julien.cottet@gmail.com<br/>
+  mdp____: soleil<br/>
   {{ form_rest(form) }}
-
   {{ form_end(form) }}
+
 {% endblock %}
 
 {##}
