@@ -276,8 +276,12 @@ form.bloggerr:hover {
 }
 
 #bg {
-  width: 90%;
-  height: 500px;
+  position: absolute;
+  left: 2.5%;
+  width: 95%;
+  height: 750px;
+  margin-top: 5px;
+  /**  background-color: rgba(200, 200, 200, 0.9);*/
 }
 
 #test {
