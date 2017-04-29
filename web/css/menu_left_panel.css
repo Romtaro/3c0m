@@ -284,11 +284,15 @@ form.bloggerr:hover {
   /**  background-color: rgba(200, 200, 200, 0.9);*/
 }
 
-#test {
+#test, #status {
   color: rgb(10, 210, 10);
   background-color: #777;
   border-radius: 5px;
   width: 270px;
+}
+
+#status {
+  width: 550px;
 }
 
 .bloggerr-notice {

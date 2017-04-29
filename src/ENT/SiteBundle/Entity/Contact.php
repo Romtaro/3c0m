@@ -17,18 +17,13 @@ class Contact
     /**
    * @var int
    *
-   * @ORM\Column(name="id", type="integer")
+   * @ORM\Column(name="id_membre", type="integer")
    * @ORM\Id
    * @ORM\GeneratedValue(strategy="AUTO")
    */
   private $id;
 
-  /**
-   * @var int
-   *
-   * @ORM\Column(name="id_membre", type="smallint", unique=true)
-   */
-  private $idMembre;
+
 
   /**
    * @var string

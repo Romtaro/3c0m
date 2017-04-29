@@ -31,48 +31,81 @@ class LoginController extends Controller
     public function connexionAction(Request $request)
     {
         $contact = new Contact();
-        //$formFactory = Forms::createFormFactory();
+
         $form = $this->get('form.factory')
                      ->create(ContactType::class, $contact);
-      //   ->createBuilder()
-       //  ->add('name', 'Symfony\Component\Form\Extension\Core\Type\TextType')
-       //  ->add('email', 'Symfony\Component\Form\Extension\Core\Type\EmailType')
-       //  ->add('mdp', 'Symfony\Component\Form\Extension\Core\Type\PasswordType')
-       //  ->add('submit', 'Symfony\Component\Form\Extension\Core\Type\SubmitType')
-                  //   ->getForm();
+
+        $repository = $this->getDoctrine()
+                           ->getManager()
+                           ->getRepository('ENTSiteBundle:Contact');
+
+        $error = "Membre";
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
-            //  var_dump();
-            $repository = $this->getDoctrine()
-              ->getManager()
-              ->getRepository('ENTSiteBundle:Contact');
-              //var_dump($repository);
-            // On récupère l'entité correspondante à l'id $id
-            $find = $repository->findAll($pseudo);
-            //var_dump($documentation);
-            $error = "TEST DONE !";
-            // $advert est donc une instance de OC\PlatformBundle\Entity\Advert
-            // ou null si l'id $id  n'existe pas, d'où ce if :
-            if (null === $find) {
-                $error = "L'annonce d'id ".$pseudo." n'existe pas.";
-            } else {
-                $pseu = $find->getPseudo();
-          //      $id_doc = $documentation->getId();
-          //      $id_cat = $documentation->getIdCat();
-          //      $nom = $documentation->getNom();
-          //      $taille = $documentation->getTaille();
-           // $date_enrg = $documentation->getDataEnregistrement();
+            $find = $repository->findAll($form);
+            //var_dump($find);
 
-            // Le render ne change pas, on passait avant un tableau, maintenant un objet
-            return $this->render('ENTSiteBundle:Membre:panelmembre.html.twig', array(
-              'pseudo' => $pseu,
-              //'data_enrg' => $data_enrg,
-              'test' => $error,
-            ));
-            }
-            return $this->render('ENTSiteBundle:Membre:login.html.twig', array(
+            $pseu_bdd = $find[0]->getPseudo();
+            $passw_bdd = $find[0]->getMdp();
+            $email_bdd = $find[0]->getEmail();
+            $status_bdd = $find[0]->getStatut();
+            //var_dump($pseu_bdd);
+
+            $pseu = $contact->getPseudo();
+            $passw = $contact->getMdp();
+            $email = $contact->getEmail();
+            //var_dump($pseu);
+
+            if ($pseu_bdd != $pseu) {
+                $error = "Le compte " . $pseu . " n'existe pas.";
+                //return $this->redirect($this->generateUrl('lo_gin'));
+                return $this->render('ENTSiteBundle:Membre:login.html.twig', array(
+                  'pseudo' => $pseu,
+                  //'data_enrg' => $data_enrg,
+                  'test' => $error,
+                  'form' => $form->createView()
+                ));
+            } else {
+                if ($email_bdd != $email) {
+                    $error = "Le compte " . $pseu . " n'est pas associé à l'adresse email : " . $email ." !";
+                    //return $this->redirect($this->generateUrl('lo_gin'));
+                    return $this->render('ENTSiteBundle:Membre:login.html.twig', array(
+                      'pseudo' => $pseu,
+                      'mail' => $email,
+                      //'data_enrg' => $data_enrg,
+                      'test' => $error,
+                      'form' => $form->createView(),
+                      ));
+                } else {
+                    if ($passw_bdd != $passw) {
+                        $error = "Le mot de passe du compte {{ pseudo }} associé à l'adresse email : " . $email ." n'est pas VALIDE !";
+                      //return $this->redirect($this->generateUrl('lo_gin'));
+                      return $this->render('ENTSiteBundle:Membre:login.html.twig', array(
+                        'pseudo' => $pseu,
+                        'mail' => $email,
+                        'error' => $error,
+                        'form' => $form->createView(),
+                        ));
+                    } else {
+                        if ($status_bdd != 0) {
+                            $stat = "Vous êtes Administrateur de niveau : " . $status_bdd . ".";
+                            return $this->render('ENTSiteBundle:Admin:paneladmin.html.twig', array(
+                              'pseudo' => $pseu,
+                              'status' => $stat,
+                            ));
+                        } else {
+                            return $this->render('ENTSiteBundle:Membre:panelmembre.html.twig', array(
+                                'pseudo' => $pseu,
+                                'test' => $error,
+                              ));
+                        }
+                    }
+                }
+                return $this->render('ENTSiteBundle:Membre:login.html.twig', array(
                  'test' => $error,
+                 'form' => $form->createView()
                ));
+            }
         }
         return $this->render('ENTSiteBundle:Membre:login.html.twig', array('form' => $form->createView()));
     //    $content = $this

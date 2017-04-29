@@ -8,7 +8,7 @@
   <div class="lastuser">
     <h3>
       Dernier Username :
-      {# {{ last_username|upper }} #}
+      {# {{ test|upper }} #}
     </h3>
   </div>
   {# {% if error %}
@@ -30,7 +30,9 @@
   mdp____: soleil<br/>
   {{ form_rest(form) }}
   {{ form_end(form) }}
-
+  {% for i in 0..100 %}
+    {#{{ i  }}#}
+  {% endfor %}
 {% endblock %}
 
 {##}

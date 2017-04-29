@@ -1,4 +1,4 @@
 services:
-#    ent_site.example:
-#        class: ENT\SiteBundle\Example
+    debug:
+        class: ENT\SiteBundle\Controller\Debug
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
