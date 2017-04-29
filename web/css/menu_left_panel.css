@@ -101,9 +101,9 @@
 }
 
 #cssmenu a {
-  height: 33.5px;
+  height: 52.5px;
   display: block;
-  padding: 65px 15px;
+  padding: 38px 15px 72px;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
