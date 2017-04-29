@@ -20,6 +20,18 @@
     {# {{ path('ajax_snippet_image_send') }}
     <div class="dropzone my-dropzone" id="form_snippet_image" action="">
           <script type="text/javascript" src="{{ asset('js/dropzone.js') }}"></script> #}
+
+    <div id="" style="">
+      <ul >
+        <li>
+          <a style="color:white;text-decoration:none;" href="{{ path('re_ssources_id_1') }}">
+            <i class="fa fa-fw fa-lg fa-tachometer"></i>
+            res/{id} where {id}=1 | Correspond à : SELECT * FROM documentation WHERE id_documentation=1 sans SQL (les bundles natifs s'en charge)
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </div>
 {% endblock %}
