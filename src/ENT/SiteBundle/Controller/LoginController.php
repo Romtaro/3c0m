@@ -42,7 +42,9 @@ class LoginController extends Controller
                   //   ->getForm();
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
-            return $this->redirect($this->generateUrl('panel_membre'));
+            //  var_dump();
+            $content = "bouh";
+            return new Response($content);//$this->redirect($this->generateUrl('panel_membre'));
         }
         return $this->render('ENTSiteBundle:Membre:login.html.twig', array('form' => $form->createView()));
     //    $content = $this
