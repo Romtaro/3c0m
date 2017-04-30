@@ -13,16 +13,7 @@ class AdminPageController extends Controller
      */
     public function adminAction()
     {
-        $content = "Vous êtes connecté en tant que : ";
-        $username = "Draden";
-        $returnn = $this
-            ->get('templating')
-            ->render('ENTSiteBundle:Admin:paneladmin.html.twig', array(
-              'eurt' => $content,
-              'username' => $username,
-              'test' => 'TEST DONE !',
-              ));
-
-        return new Response($returnn);
+        var_dump("de");
+        return new Response('<html><body>Admin page!</body></html>');
     }
 }

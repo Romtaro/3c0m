@@ -9,6 +9,7 @@ use ENT\SiteBundle\Form\ContactType;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\Form\Forms;
 use ENT\SiteBundle\Entity\Contact;
+use Symfony\Component\Debug\Debug;
 
 class LoginController extends Controller
 {
@@ -31,7 +32,6 @@ class LoginController extends Controller
     public function connexionAction(Request $request)
     {
         $contact = new Contact();
-
         $form = $this->get('form.factory')
                      ->create(ContactType::class, $contact);
 
@@ -48,8 +48,10 @@ class LoginController extends Controller
             //var_dump($pseu);
 
             $find = $repository->findBy(array('pseudo' => $pseu, ));
-            //var_dump($find);
 
+            $sess = $request->getSession();
+
+            //var_dump($sess);
             $pseu_bdd = $find[0]->getPseudo();
             $passw_bdd = $find[0]->getMdp();
             $email_bdd = $find[0]->getEmail();

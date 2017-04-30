@@ -14,6 +14,9 @@
   | paneladmin
   <div id="status">
     <h1>{{ status }}</h1>
+    {% if is_granted('ROLE_USER') %}
+      <a href="{{ path('lo_gin') }}">Delete</a>
+    {% endif %}
   </div>
   <div >
     <ul >
