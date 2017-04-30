@@ -256,13 +256,22 @@ form.bloggerr:hover {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   border-radius: 30px;
   transition: all .99s ease-in-out;
+  background-color: rgba(10, 0, 0, 0.3);
 }
 
-.ww:hover {
-  color: white;
+#cssmenu ul li a.ww {
+  height: 100%;
 }
 
-.ww {
+#cssmenu ul.bgg {
+  background-color: rgba(30, 10, 10, 0.2);
+}
+
+#cssmenu ul li:hover a.ww {
+  color: black;
+}
+
+#cssmenu ul li a .ww {
   height: 30px;
 }
 
@@ -272,6 +281,9 @@ form.bloggerr:hover {
   width: 89%;
   height: 100%;
   margin: -8px;
+}
+
+.coloor {
   background-color: rgba(30, 10, 10, 0.2);
 }
 
@@ -337,6 +349,11 @@ form.bloggerr input[type="text"], form.bloggerr input[type="email"], form.blogge
   font-size: 20px;
   min-height: 26px;
   border-radius: 10px;
+}
+
+form.bloggerr:hover label {
+  color: white;
+  transition: all 1.4s ease-in-out;
 }
 
 form.bloggerr textarea {

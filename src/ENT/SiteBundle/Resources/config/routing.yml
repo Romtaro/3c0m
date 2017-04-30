@@ -1,7 +1,9 @@
 hello_the_world:
-    path:     /world/hello
-    defaults: { _controller: ENTSiteBundle:Advert:index }
-
+    path:     /
+    defaults: { _controller: ENTSiteBundle:Login:connexion }
+    requirements:
+        _method: GET | POST
+        
 f_aq:
     path:     /faq
     defaults: { _controller: ENTSiteBundle:Faq:index }
