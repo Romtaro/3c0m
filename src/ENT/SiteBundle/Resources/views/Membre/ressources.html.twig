@@ -14,26 +14,25 @@
   <div id="bg">
     <div id="" style="color:white;">
       <h1>
-        {% for contnom in nom %}
-      {#   {{ id_doc }}#}
-        |
-      {#   {{ id_cat }}#}
-        |
+        <table>
+          <tr style="border: 1px solid black;">
+            <th>Nom document | Taille</th>
 
-        {{ contnom }}
-        |
+          </tr>
+          {% for contnom in v_nom %}
+            <tr style="border: 1px solid red;">
+              <th>{{ contnom }}</th>
+            </tr>
+          {% endfor %}
 
-      {#   {{ taille }}#}
-        |
-        {#  {{ data_enrg }}#}
-        {% endfor %}
+        </table>
       </h1>
     </div>
-    {# {{ path('ajax_snippet_image_send') }} #}
+    {# {{ path('ajax_snippet_image_send') }}
     <div class="dropzone my-dropzone" id="form_snippet_image" action="">
       <script type="text/javascript" src="{{ asset('js/dropzone.js') }}"></script>
     </div>
-
+#}
     <div id="" style="">
       <ul >
         <li>

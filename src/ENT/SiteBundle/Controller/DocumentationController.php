@@ -10,7 +10,7 @@ class DocumentationController extends Controller
 {
     public function viewAction($idCat)
     {
-      //  var_dump($idCat);
+        //  var_dump($idCat);
      // On récupère le repository
      $repository = $this->getDoctrine()
        ->getManager()
@@ -32,23 +32,25 @@ class DocumentationController extends Controller
      if (null === $documentation) {
          $error = "L'annonce d'id ".$idCat." n'existe pas.";
      } else {
+         $contnom = array();
 
-        $contnom = array();
-        $doc = new Documentation();
-        foreach ($documentation as $doc){
-        $nom = $doc->getNom();
-        $taille = $doc->getTaille();
-        array_push($contnom, $nom, $taille);
+         $doc = new Documentation();
+         foreach ($documentation as $doc) {
+             $nom = $doc->getNom();
+             $taille = $doc->getTaille();
+             array_push($contnom, $nom);
+         }
 
+         foreach ($contnom as $key => $value) {
+         }
+         var_dump($contnom);
 
-    // $date_enrg = $documentation->getDataEnregistrement();
- }
- $content = $this
+         $content = $this
      ->get('templating')
-     ->render('ENTSiteBundle:Membre:ressources.html.twig', array('nom' => $contnom));
+     ->render('ENTSiteBundle:Membre:ressources.html.twig', array('v_nom' => $contnom, 'v_taille' => $contnom));
 //var_dump($content);
      // Le render ne change pas, on passait avant un tableau, maintenant un objet
 return new Response($content);
+     }
     }
-}
 }
