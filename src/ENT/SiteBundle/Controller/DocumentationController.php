@@ -33,21 +33,23 @@ class DocumentationController extends Controller
          $error = "L'annonce d'id ".$idCat." n'existe pas.";
      } else {
          $contnom = array();
+         $conttaille = array();
 
          $doc = new Documentation();
          foreach ($documentation as $doc) {
              $nom = $doc->getNom();
              $taille = $doc->getTaille();
              array_push($contnom, $nom);
+             array_push($conttaille, $taille);
          }
+         //var_dump($contnom);
+         //var_dump($conttaille);
 
-         foreach ($contnom as $key => $value) {
-         }
-         var_dump($contnom);
+         //var_dump($contnom);
 
          $content = $this
      ->get('templating')
-     ->render('ENTSiteBundle:Membre:ressources.html.twig', array('v_nom' => $contnom, 'v_taille' => $contnom));
+     ->render('ENTSiteBundle:Membre:ressources.html.twig', array('v_nom' => $contnom, 'v_taille' => $conttaille));
 //var_dump($content);
      // Le render ne change pas, on passait avant un tableau, maintenant un objet
 return new Response($content);

@@ -13,19 +13,32 @@
 {% block body %}
   <div id="bg">
     <div id="" style="color:white;">
-      <h1>
+      <h1 style="display:inline-flex;">
         <table>
-          <tr style="border: 1px solid black;">
-            <th>Nom document | Taille</th>
+          <tr style="text-align:right;border: 1px solid black;">
+            <th >Nom document</th>
 
           </tr>
+
           {% for contnom in v_nom %}
             <tr style="border: 1px solid red;">
-              <th>{{ contnom }}</th>
+              <th style="text-align:left;">{{ contnom }}</th>
             </tr>
           {% endfor %}
-
         </table>
+
+        <table>
+          <tr style="text-align:right;border: 1px solid black;">
+            <th>Taille</th>
+          </tr>
+
+          {% for conttaille in v_taille %}
+            <tr style="border: 1px solid red;">
+              <th style="text-align:left;">{{ conttaille }}</th>
+            </tr>
+          {% endfor %}
+        </table>
+
       </h1>
     </div>
     {# {{ path('ajax_snippet_image_send') }}
