@@ -9,26 +9,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="{{ asset('js/dropzone.js') }}"></script>
 {% endblock %}
-{% block login %}
 
-  <li class="active">
-    <a class="ww" href="{{ path('lo_gin') }}">Déconnexion</a>
-  </li>
-
-{% endblock %}
 {% block body %}
   <div id="bg">
     <div id="" style="color:white;">
       <h1>
-        {{ id_doc }}
+        {% for contnom in nom %}
+      {#   {{ id_doc }}#}
         |
-        {{ id_cat }}
+      {#   {{ id_cat }}#}
         |
-        {{ nom }}
+
+        {{ contnom }}
         |
-        {{ taille }}
+
+      {#   {{ taille }}#}
         |
         {#  {{ data_enrg }}#}
+        {% endfor %}
       </h1>
     </div>
     {# {{ path('ajax_snippet_image_send') }} #}
@@ -38,13 +36,13 @@
 
     <div id="" style="">
       <ul >
-      <li>
-        <a style="color:white;text-decoration:none;" href="{{ path('re_ssources') }}">
-          <i class="fa fa-fw fa-lg fa-tachometer"></i>
-          Retour sur /res simple. -> redirection vers ressources_error.html.twig (error car pas d'{id} selectionné [voir les routings de notre Bundle])
-        </a>
-      </li>
-    </ul>
+        <li>
+          <a style="color:white;text-decoration:none;" href="{{ path('re_ssources') }}">
+            <i class="fa fa-fw fa-lg fa-tachometer"></i>
+            Retour sur /res simple. -> redirection vers ressources_error.html.twig (error car pas d'{id} selectionné [voir les routings de notre Bundle])
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 {% endblock %}
