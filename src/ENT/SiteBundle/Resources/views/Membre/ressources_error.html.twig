@@ -9,7 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
 {% endblock %}
+{% block login %}
 
+  <li class="active">
+    <a class="ww" href="{{ path('lo_gin') }}">Déconnexion</a>
+  </li>
+
+{% endblock %}
 {% block body %}
   <div id="bg">
     <div id="test">
@@ -23,15 +29,15 @@
 
     <div id="" style="">
       <ul >
-        <li>
-          <a style="color:white;text-decoration:none;" href="{{ path('re_ssources_id_1') }}">
-            <i class="fa fa-fw fa-lg fa-tachometer"></i>
-            res/{id} where {id}=1 | Correspond à : SELECT * FROM documentation WHERE id_documentation=1 sans SQL (les bundles natifs s'en charge)
-          </a>
-        </li>
-      </ul>
-    </div>
-
+      <li>
+        <a style="color:white;text-decoration:none;" href="{{ path('re_ssources_id_1') }}">
+          <i class="fa fa-fw fa-lg fa-tachometer"></i>
+          res/{id} where {id}=1 | Correspond à : SELECT * FROM documentation WHERE id_documentation=1 sans SQL (les bundles natifs s'en charge)
+        </a>
+      </li>
+    </ul>
   </div>
+
+</div>
 </div>
 {% endblock %}

@@ -1,6 +1,15 @@
 {% extends 'base.menu.html.twig' %}
 {% block stylesheets %}{% endblock %}
+{% block login %}
+
+  <li class="active">
+    <a class="ww" href="{{ path('lo_gin') }}">Déconnexion</a>
+  </li>
+
+{% endblock %}
+
 {% block body %}
+
   <strong>{{ pseudo }}</strong>
   | paneladmin
   <div id="status">
@@ -8,26 +17,26 @@
   </div>
   <div >
     <ul >
-      <li>
-        <a href="membre">
-          <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
-          Retour au tableau de bord (membre)</a>
-      </li>
-    </ul>
-  </div>
+    <li>
+      <a href="membre">
+        <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+        Retour au tableau de bord (membre)</a>
+    </li>
+  </ul>
+</div>
 
-  <div >
-    <ul>
-      <li>
-        <a href="gcompte">
-          <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
-          Gestion des comptes (gcompte)</a>
-      </li><br/>
-      <li>
-        <a href="galert">
-          <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
-          Gestion des alertes (galert)</a>
-      </li>
-    </ul>
-  </div>
+<div >
+  <ul>
+    <li>
+      <a href="gcompte">
+        <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+        Gestion des comptes (gcompte)</a>
+    </li><br/>
+    <li>
+      <a href="galert">
+        <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+        Gestion des alertes (galert)</a>
+    </li>
+  </ul>
+</div>
 {% endblock %}

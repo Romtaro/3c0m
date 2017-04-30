@@ -1,22 +1,29 @@
 {% extends 'base.menu.html.twig' %}
 {% block stylesheets %}{% endblock %}
+{% block login %}
+
+  <li class="active">
+    <a class="ww" href="{{ path('lo_gin') }}">Déconnexion</a>
+  </li>
+
+{% endblock %}
 {% block body %}
   panelmembre
   <div id="test">
-    <h1>
+    {#<h1>
       {{ test|upper }}
       :
       {{ pseudo|capitalize }}
-    </h1>
+    </h1>#}
   </div>
 
   <div id="" style="">
     <ul >
-      <li>
-        <a href="admin" style="height:30px;padding-top:3%;padding-bottom:1%;">
-          <i class="fa fa-cog fa-spin fa-lg fa-fw" aria-hidden="true"></i>
-          Go to Tableau de Bord Admin (panelAdmin)</a>
-      </li>
-    </ul>
-  </div>
+    <li>
+      <a href="admin" style="height:30px;padding-top:3%;padding-bottom:1%;">
+        <i class="fa fa-cog fa-spin fa-lg fa-fw" aria-hidden="true"></i>
+        Go to Tableau de Bord Admin (panelAdmin)</a>
+    </li>
+  </ul>
+</div>
 {% endblock %}

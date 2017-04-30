@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+
+    <title>
+      {% block title %}
+        3c0m - SAV - Connexion
+      {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/menu_left_panel.css') }}">
+    {% block stylesheets %}{% endblock %}
+    {% block javascripts %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('icon.ico') }}"/>
+  </head>
+  <body>
+    <style type="text/css"></style>
+    <div id="cssmenu">
+      <ul>
+        <li class="active">
+          <a class="ww" href="{{ path('lo_gin') }}">Connexion</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div id="view_right">
+
+      {% block body %}{% endblock %}
+
+    </div>
+
+  </body>
+</html>

@@ -1,5 +1,11 @@
-{% extends 'base.menu.html.twig' %}
+{% extends 'base.menuadmin.html.twig' %}
+{% block login %}
 
+  <li class="active">
+    <a class="ww" href="{{ path('lo_gin') }}">Déconnexion</a>
+  </li>
+
+{% endblock %}
 {% block body %}
   gestionalert
   <div id="test">
@@ -10,11 +16,11 @@
 
   <div>
     <ul >
-      <li>
-        <a href="admin" style="height:30px;padding-top:3%;padding-bottom:1%;">
-          <i class="fa fa-fw fa-tachometer"></i>
-          Retour au tableau de bord (admin)</a>
-      </li>
-    </ul>
-  </div>
+    <li>
+      <a href="admin" style="height:30px;padding-top:3%;padding-bottom:1%;">
+        <i class="fa fa-fw fa-tachometer"></i>
+        Retour au tableau de bord (admin)</a>
+    </li>
+  </ul>
+</div>
 {% endblock %}

@@ -42,7 +42,12 @@ class LoginController extends Controller
         $error = "Membre";
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
-            $find = $repository->findAll($form);
+            $pseu = $contact->getPseudo();
+            $passw = $contact->getMdp();
+            $email = $contact->getEmail();
+            //var_dump($pseu);
+
+            $find = $repository->findBy(array('pseudo' => $pseu, ));
             //var_dump($find);
 
             $pseu_bdd = $find[0]->getPseudo();
@@ -50,11 +55,6 @@ class LoginController extends Controller
             $email_bdd = $find[0]->getEmail();
             $status_bdd = $find[0]->getStatut();
             //var_dump($pseu_bdd);
-
-            $pseu = $contact->getPseudo();
-            $passw = $contact->getMdp();
-            $email = $contact->getEmail();
-            //var_dump($pseu);
 
             if ($pseu_bdd != $pseu) {
                 $error = "Le compte " . $pseu . " n'existe pas.";

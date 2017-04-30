@@ -1,5 +1,11 @@
 {% extends 'base.menu.html.twig' %}
+{% block login %}
 
+  <li class="active">
+    <a class="ww" href="{{ path('lo_gin') }}">Déconnexion</a>
+  </li>
+
+{% endblock %}
 {% block body %}
   support
   <div id="test">
