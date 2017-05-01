@@ -4,19 +4,18 @@ security:
 
     # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-         mysql_provider:
-            entity:
-                class: ENTSiteBundle:Contact
-                property: pseudo
-      #  in_memory:
-      #      memory:
-      #          users:
-      #              draden:
-      #                    password: draden
-      #                    roles: 'ROLE_USER'
-      #              admin:
-      #                    password: admin
-      #                    roles: 'ROLE_USER, ROLE_ADMIN'
+      #  webservice:
+      #      id: app.webservice_user_provider
+
+        in_memory:
+            memory:
+                users:
+                    draden:
+                          password: draden
+                          roles: 'ROLE_USER'
+                    admin:
+                          password: admin
+                          roles: 'ROLE_ADMIN'
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -32,27 +31,23 @@ security:
 
             # activate different ways to authenticate
 
-            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticat
-        default:
-            anonymous: ~
-            form_login:
-              login_path: login
-              check_path: login
-              require_previous_session: false
-              default_target_path: /membre
-            provider: mysql_provider
-            logout:
-                path: /logout
-                target: /
-    encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
-#TROUVER UN PUTIN DE MOYEN POUR SE DELOG' DU profiler
+            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+        secured_area:
+            pattern: ^/
+            remote_user:
+                provider: in_memory
+
+
+
+
 
     access_control:
-        #- { path: ^/admin, role: ROLE_ADMIN }
-        #- { path: ^/res$, role: ROLE_USER }
-        #- { path: ^/faq, role: ROLE_USER }
-      #  - { path: ^/support, role: ROLE_USER }
-      #  - { path: ^/membre, role: ROLE_USER }
-      #  - { path: ^/gcompte, role: ROLE_ADMIN }
-      #  - { path: ^/galert, role: ROLE_ADMIN }
+        # require ROLE_ADMIN for /admin* ----- Changé en ROLE_USER pour le moment
+        - { path: ^/admin, roles: ROLE_ADMIN }
+
+    encoders:
+        ENT\SiteBundle\Security\User\WebserviceUser:
+            algorithm: bcrypt
+            cost: 12
+        Symfony\Component\Security\Core\User\User: plaintext

@@ -34,6 +34,8 @@ su_pport:
     path:     /support
     defaults: { _controller: ENTSiteBundle:Support:index }
 
+
+
 lo_out:
     path:     /logout
     defaults: { _controller: ENTSiteBundle:Security:logout }
