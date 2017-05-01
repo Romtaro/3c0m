@@ -22,6 +22,7 @@ obody {
   position: relative;
   z-index: 597;
   float: left;
+    height: 100%;
 }
 
 #cssmenu ul li {
@@ -30,7 +31,7 @@ obody {
   vertical-align: middle;
   position: relative;
   display:block;
-  height: 125px;
+  height: 20%;
 }
 
 #cssmenu ul li.hover, #cssmenu ul li:hover {
@@ -84,10 +85,10 @@ obody {
 #cssmenu {
   position: absolute;
   float: left;
-  width: 15%;
+  width: 13%;
   background: rgba(0, 0, 0, 0.1);
-  height: 0;
-  font-size: 15px;
+  height: 100%;
+  font-size: 12px;
   font-weight: bolder;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   letter-spacing: 1px;
@@ -114,7 +115,7 @@ obody {
 }
 
 #cssmenu .ww {
-  height: 3px;
+  height: 100px;
 }
 
 #cssmenu>ul {
@@ -302,18 +303,19 @@ form.bloggerr:hover {
 }
 
 #notif {
-  width: 92%;
+  width: 85%;
   background-color: rgba(150, 0, 0, 0.2);
   border-radius: 30px;
-  height: 75px;
+  height: 50px;
   border: 1px solid red;
   color: rgba(200, 25, 25, 0.9);
   padding: 10px;
-  padding-top: 25px;
-  padding-left: 18%;
+  padding-top: 18px;
+  font-size: 11px;
+  padding-left: 9%;
   padding-bottom: 10px;
   letter-spacing: 2px;
-  margin-left: 5%;
+  margin-left: 3%;
   font-weight: bolder;
 }
 
@@ -328,7 +330,7 @@ form.bloggerr:hover {
 }
 
 .titlee {
-  left: 75px;
+  left: 2%;
 }
 
 .titlee h1 {
@@ -343,40 +345,48 @@ form.bloggerr:hover {
 
 .myinfo {
   position: absolute;
-  left: 15%;
-  top: 220px;
+  left: 2%;
+  top: 150px;
 }
 
 .miA {
-  width: 550px;
-  height: 250px;
+  width: 450px;
+  height: 200px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   background-color: rgba(250, 250, 250, 0.2);
-  font-size: 75px;
+  font-size: 55px;
+}
+
+.myinfo h2, .mystuff h2, .myactivity h2 {
+  font-size: 19px;
+}
+
+.myinfo h2 i, .mystuff h2 i, .myactivity h2 i {
+  font-size: 19px;
 }
 
 .miA i {
   padding: 2%;
-  padding-left: 50px;
-  padding-top: 25px;
-  font-size: 196px;
+  padding-left: 45px;
+  padding-top: 20px;
+  font-size: 156px;
 }
 
 .miAa {
-  font-size: 18px;
+  font-size: 14px;
   position: absolute;
-  right: 5.5%;
-  top: 115px;
+  right: 6%;
+  top: 75px;
 }
 
 .miB {
-  width:155%;
+  width:300px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   background-color: rgba(250, 250, 250, 0.2);
   padding: 5px;
-  height: 500px;
+  height: 300px;
   display: inline-table;
 }
 
@@ -388,7 +398,7 @@ form.bloggerr:hover {
 .miBa {
   margin: 5px;
   margin-bottom: 20px;
-  font-size: 17px;
+  font-size: 14px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 5px;
@@ -398,9 +408,9 @@ form.bloggerr:hover {
 }
 
 .miC {
-  position: fixed;
-  width: 42%;
-  height: 28%;
+  position: absolute;
+  width: 500px;
+  height: 175px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   background-color: rgba(250, 250, 250, 0.2);
@@ -408,13 +418,15 @@ form.bloggerr:hover {
 
 .myactivity {
   position: absolute;
-  left: 15%;
-  bottom: 35.5%;
+  left: 2%;
+  bottom: 30%;
 }
 
+
+
 .mystuff {
-  right: 21%;
-  top: 170px;
+  right: 20%;
+  top: 13%;
 }
 
 .menuadm {
@@ -430,6 +442,8 @@ form.bloggerr:hover {
 }
 
 #status {
+  position: absolute;
+  left:50px;
   width: 700px;
   font-size: 14px;
 }

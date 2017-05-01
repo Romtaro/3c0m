@@ -7,27 +7,112 @@
   </li>
 
 {% endblock %}
+
 {% block body %}
-  panelmembre
-  <div id="test">
-    {#<h1>
+  {#<h1>
       {{ test|upper }}
       :
       {{ pseudo|capitalize }}
     </h1>#}
 
-    {% if is_granted('ROLE_USER') %}
-      <a href="{{ path('lo_gin') }}">Delete</a>
-    {% endif %}
+  {% if is_granted('ROLE_USER') %}
+    <a href="{{ path('lo_gin') }}">Delete</a>
+  {% endif %}
+
+  <strong>{{ pseudo }}</strong>
+  | panelmembre
+
+  <div id="notif">
+    Attention ! Exemple de message- Exemple de message- Exemple de message- Exemple de message.
+    <a href="">
+      <i class="fa fa-times fa-2x"></i>
+    </a>
   </div>
 
-  <div id="" style="">
-    <ul >
-    <li>
-      <a href="admin" style="height:30px;padding-top:3%;padding-bottom:1%;">
-        <i class="fa fa-cog fa-spin fa-lg fa-fw" aria-hidden="true"></i>
-        Go to Tableau de Bord Admin (panelAdmin)</a>
-    </li>
-  </ul>
-</div>
+  <div class="titlee">
+    <h1>Tableau de bord</h1>
+    <h4>Bienvenue sur votre interface client,
+      <strong>{{ pseudo|upper }}</strong>
+    </h4>
+  </div>
+
+  <div class="myinfo">
+    <h2>
+      <i class="fa fa-user fa-2x"></i>
+      Mes Informations
+    </h2>
+    <div class="miA">
+      <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+      <div class="miAa">
+        Nom client
+        <br/><br/>
+
+        04.00.00.00.00
+        <br/><br/>
+
+        support@exemple.compte
+        <br/><br/>
+
+        13, rue des oliviers
+        <br/>
+        13100 - Aix-en-Provence
+        <br/><br/>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="mystuff">
+    <h2>
+      <i class="fa fa-suitcase fa-2x"></i>
+      Mon équipement
+    </h2>
+    <div class="miB">
+      <div class="miBa">
+        <i class="fa fa-file-image-o fa-4x" aria-hidden="true"></i>
+        <h3>MATERIEL X</h3>
+        N° : M023 Type : CAT3
+      </div>
+
+      <div class="miBa">
+        <i class="fa fa-file-image-o fa-4x" aria-hidden="true"></i>
+        <h3>MATERIEL X</h3>
+        N° : M023 Type : CAT3
+      </div>
+
+      <div class="miBa">
+        <i class="fa fa-file-image-o fa-4x" aria-hidden="true"></i>
+        <h3>MATERIEL X</h3>
+        N° : M023 Type : CAT3
+      </div>
+
+      <div class="miBa">
+        <i class="fa fa-file-image-o fa-4x" aria-hidden="true"></i>
+        <h3>MATERIEL X</h3>
+        N° : M023 Type : CAT3
+      </div>
+
+      <div class="miBa">
+        <i class="fa fa-file-image-o fa-4x" aria-hidden="true"></i>
+        <h3>MATERIEL X</h3>
+        N° : M023 Type : CAT3
+      </div>
+
+      <div class="miBa">
+        <i class="fa fa-file-image-o fa-4x" aria-hidden="true"></i>
+        <h3>MATERIEL X</h3>
+        N° : M023 Type : CAT3
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="myactivity">
+    <h2>
+      <i class="fa fa-tags fa-2x"></i>
+      Activité
+    </h2>
+    <div class="miC"></div>
+  </div>
 {% endblock %}
