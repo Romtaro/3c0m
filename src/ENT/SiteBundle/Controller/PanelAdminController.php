@@ -16,8 +16,15 @@ class PanelAdminController extends Controller
     // On récupère l'entité correspondante à l'id $id
   //  $documentation = $repository->find($id);
     //var_dump($documentation);
+    if (isGranted('ROLE_USER')) {
+        $content = $this
+          ->get('templating')
+          ->render('ENTSiteBundle:Membre:panelmembre.html.twig', array('test' => "TEST Done ! (test)", 'username' => "| Et ta maman (username)", 'eurt' => "PanelAdminController (eurt)"));
 
-    $content = $this
+
+        return new Response($content);
+    }
+        $content = $this
         ->get('templating')
         ->render('ENTSiteBundle:Admin:paneladmin.html.twig', array('test' => "TEST Done ! (test)", 'username' => "| Et ta maman (username)", 'eurt' => "PanelAdminController (eurt)"));
 

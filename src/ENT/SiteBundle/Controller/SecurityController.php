@@ -58,16 +58,16 @@ class SecurityController extends Controller
             //var_dump($sess);
             //var_dump($tokn_att);
             $tokn_att = $this->get('security.token_storage');
-            //$td = new WebserviceUser($pseu_bdd, $passw_bdd, $salt_bdd, array($roles_bdd));
-            //var_dump($td);
+            $td = new WebserviceUser($pseu_bdd, $passw_bdd, $salt_bdd, array($roles_bdd));
+            var_dump($td);
             $user = new User($pseu_bdd, $passw_bdd, array($roles_bdd), $enabled, true, true, true);
 
 
 
             $de = new InMemoryUserProvider(array($users = array($user)));
-            var_dump($de);
-            $cot = $de->loadUserByUsername($pseu_bdd);
-            var_dump($cot);
+            //var_dump($de);
+            //$cot = $de->loadUserByUsername($pseu_bdd);
+            //var_dump($cot);
             //$cott = $de->createUser($td);
             //var_dump($cott);
 
