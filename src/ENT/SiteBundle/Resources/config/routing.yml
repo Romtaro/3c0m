@@ -22,6 +22,10 @@ re_ssources:
     path:     /res
     defaults: { _controller: ENTSiteBundle:Ressources:index2 }
 
+re_ssourcess:
+    path:     /res/
+    defaults: { _controller: ENTSiteBundle:Ressources:index2 }
+
 re_sssources:
     path:     /res/{idCat}
     defaults: { _controller: ENTSiteBundle:Documentation:view }
@@ -33,6 +37,8 @@ re_ssources_id_1:
 su_pport:
     path:     /support
     defaults: { _controller: ENTSiteBundle:Support:index }
+
+
 
 lo_out:
     path:     /logout

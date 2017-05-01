@@ -25,12 +25,12 @@ obody {
 }
 
 #cssmenu ul li {
-  float: left;
-  min-height: 1px;
+
   line-height: 1em;
   vertical-align: middle;
   position: relative;
-  height: 210px;
+  display:block;
+  height: 125px;
 }
 
 #cssmenu ul li.hover, #cssmenu ul li:hover {
@@ -84,7 +84,7 @@ obody {
 #cssmenu {
   position: absolute;
   float: left;
-  width: 205px;
+  width: 15%;
   background: rgba(0, 0, 0, 0.1);
   height: 0;
   font-size: 15px;
@@ -118,7 +118,7 @@ obody {
 }
 
 #cssmenu>ul {
-  width: 100%;
+  width: 99%;
   background: rgba(0, 0, 20, 0.75);
 }
 
@@ -136,6 +136,8 @@ obody {
   color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
   transition: all .4s ease-out;
+  background-color: rgba(50, 70, 70, 0.7);
+  height: 135px;
 }
 
 #cssmenu>ul>li.active a {
@@ -151,7 +153,7 @@ obody {
 }
 
 #cssmenu ul li.has-sub>a:after {
-  content: '+';
+  content: '';
   position: absolute;
   top: 50%;
   right: 15px;
@@ -340,7 +342,7 @@ form.bloggerr:hover {
 }
 
 .myinfo {
-  position: fixed;
+  position: absolute;
   left: 15%;
   top: 220px;
 }
@@ -405,7 +407,7 @@ form.bloggerr:hover {
 }
 
 .myactivity {
-  position: fixed;
+  position: absolute;
   left: 15%;
   bottom: 35.5%;
 }

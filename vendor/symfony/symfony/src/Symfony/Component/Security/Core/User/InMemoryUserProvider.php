@@ -37,9 +37,11 @@ class InMemoryUserProvider implements UserProviderInterface
     public function __construct(array $users = array())
     {
         foreach ($users as $username => $attributes) {
-            $password = isset($attributes['password']) ? $attributes['password'] : null;
+            $username = isset($attributes['username']) ? $attributes['username'] : 'admin';
+            $password = isset($attributes['password']) ? $attributes['password'] : 'admin';
             $enabled = isset($attributes['enabled']) ? $attributes['enabled'] : true;
-            $roles = isset($attributes['roles']) ? $attributes['roles'] : array();
+            $roles = isset($attributes['roles']) ? $attributes['roles'] : array('ROLE_ADMIN');
+
             $user = new User($username, $password, $roles, $enabled, true, true, true);
 
             $this->createUser($user);

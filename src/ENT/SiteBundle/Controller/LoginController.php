@@ -14,6 +14,8 @@ use ENT\SiteBundle\Entity\User;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\Security\Core\Authorization\AuthorizationChecker;
+use Symfony\Component\Security\Core\SecurityContext;
+use Symfony\Component\Security\Core\Security;
 
 class LoginController extends Controller
 {
@@ -154,7 +156,7 @@ class LoginController extends Controller
             //$finde = $find->getRoles();
             $sess = $request->getSession();
             $findo = $find[0]->getRoles();
-            var_dump($findo);
+
             //var_dump($sess);
             $pseu_bdd = $find[0]->getPseudo();
             $passw_bdd = $find[0]->getMdp();
@@ -194,8 +196,10 @@ class LoginController extends Controller
                         ));
                     } else {
                         if ($status_bdd != 0) {
-                            $stat = "Vous êtes Administrateur de niveau : " . $status_bdd . " : ";
+                            $request->getSession()->set(Security::LAST_USERNAME, $pseu_bdd);
+                            $td = $request->getSession()->get(Security::LAST_USERNAME);
                             //get Entity Manager
+                            var_dump($td);
                             $em = $this->getDoctrine()->getManager();
 
                             //write Entity in database
@@ -204,7 +208,7 @@ class LoginController extends Controller
                             $contente =  $this->get('templating')
                                         ->render('ENTSiteBundle:Admin:paneladmin.html.twig', array(
                               'pseudo' => $pseu,
-                              'status' => $stat,
+                              'status' => $error,
                             ));
                             return new Response($contente);
                         } else {

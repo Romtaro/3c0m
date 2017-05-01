@@ -109,7 +109,12 @@ class Contact
    */
    private $roles;
 
-
+   /**
+    * @var string
+    *
+    * @ORM\Column(name="salt", type="text", nullable=false)
+    */
+   private $salt;
 
   /**
    * Get id
@@ -443,6 +448,30 @@ class Contact
     public function setRoles($roles)
     {
         $this->roles = $roles;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of Salt
+     *
+     * @return string
+     */
+    public function getSalt()
+    {
+        return $this->salt;
+    }
+
+    /**
+     * Set the value of Salt
+     *
+     * @param string salt
+     *
+     * @return self
+     */
+    public function setSalt($salt)
+    {
+        $this->salt = $salt;
 
         return $this;
     }
