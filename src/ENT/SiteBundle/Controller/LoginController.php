@@ -199,8 +199,8 @@ class LoginController extends Controller
                             $em = $this->getDoctrine()->getManager();
 
                             //write Entity in database
-                            $em->persist($find);
-                            $em->flush();
+                            //$em->persist($find);
+                            //$em->flush();
                             $contente =  $this->get('templating')
                                         ->render('ENTSiteBundle:Admin:paneladmin.html.twig', array(
                               'pseudo' => $pseu,
