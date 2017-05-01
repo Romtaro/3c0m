@@ -10,7 +10,7 @@ f_aq:
 
 lo_gin:
     path:     /login
-    defaults: { _controller: ENTSiteBundle:Security:login }
+    defaults: { _controller: ENTSiteBundle:CheckAuth:index }
     requirements:
         _method: GET | POST
 

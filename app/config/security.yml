@@ -4,19 +4,15 @@ security:
 
     # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        webservice:
-            id: app.webservice_user_provider
-
-
         in_memory:
             memory:
                 users:
-                    juju:
-                        password: soleil
-                        roles: 'ROLE_USER'
+                    draden:
+                          password: draden
+                          roles: 'ROLE_USER'
                     admin:
-                        password: admin
-                        roles: 'ROLE_USER, ROLE_ADMIN'
+                          password: admin
+                          roles: 'ROLE_ADMIN'
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -26,9 +22,18 @@ security:
         default:
             anonymous: ~
             http_basic: ~
+        admin:
+            pattern: ^/admin
+            http_basic:
+                realm: "Administration"
+                provider: in_memory
+            logout:
+                invalidate_session: true
+                path: /logout
+                target: /
+            anonymous: ~
 
         main:
-            http_basic: ~
             anonymous: ~
 
             # activate different ways to authenticate
@@ -40,20 +45,9 @@ security:
 
 
 
-
-  #  access_control:
+    access_control:
         # require ROLE_ADMIN for /admin* ----- Changé en ROLE_USER pour le moment
-      #  - { path: ^/admin, roles: ROLE_ADMIN }
-      #  - { path: ^/galert, roles: ROLE_ADMIN }
-      #  - { path: ^/glaert, roles: ROLE_ADMIN }
-      #  - { path: ^/membre, roles: ROLE_USER }
-      #  - { path: ^/faq, roles: ROLE_USER }
-      #  - { path: ^/support, roles:# ROLE_USER }
-      #  - { path: ^/res, roles: ROLE_USER }
-      #  - { path: ^/res/1, roles: ROLE_USER }
-      #  - { path: ^/res/, roles: ROLE_USER }
-
-
+        - { path: ^/admin, roles: ROLE_ADMIN }
 
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext

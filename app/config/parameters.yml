@@ -17,3 +17,4 @@ parameters:
     database.password: null
     mailer_auth_mode: login
     mailer_encryption: ssl
+    check: 0

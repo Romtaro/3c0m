@@ -39,10 +39,11 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     globals:
-        pseudo: null
         test: null
         error: null
         status: null
+        check: "%check%"
+        pseudo: '{token}'
 
 # Doctrine Configuration
 doctrine:

@@ -96,7 +96,7 @@ class SecurityController extends Controller
     {
         $authenticationUtils = $this->get('security.authentication_utils');
         $request->getSession()->invalidate();
-        return $this->render('ENTSiteBundle:Membre:logine.html.twig', array(
+        return $this->render('ENTSiteBundle:Membre:login.html.twig', array(
 
       'last_username' => $authenticationUtils->getLastUsername(),
 

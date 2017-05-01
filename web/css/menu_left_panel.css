@@ -374,37 +374,55 @@ form.bloggerr:hover {
 }
 
 .miAa {
-  font-size: 14px;
+  font-size: 13px;
   position: absolute;
-  right: 6%;
+  right: 7%;
   top: 75px;
 }
 
 .miB {
-  width:300px;
+  width:350px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   background-color: rgba(250, 250, 250, 0.2);
   padding: 5px;
-  height: 300px;
-  display: inline-table;
+  height: auto;
+  max-height: 470px;
 }
 
-.miBa i {
-  float: left;
-  margin-right: 25px;
-}
-
-.miBa {
-  margin: 5px;
-  margin-bottom: 20px;
-  font-size: 14px;
+.miB0 {
+  width: 100%;
+  margin-bottom: 5px;
+  font-size: 12px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 5px;
-  min-height:100px;
-  padding: 2%;
-  padding-bottom: 3%;
+  height:70px;
+  display: inline-flex;
+}
+
+.miBa {
+  position: relative;
+}
+
+.miBa p {
+
+}
+
+.miBb h3 {
+  font-size: 18px;
+}
+
+.miBa i {
+  padding: 7px;
+  font-size: 55px;
+}
+
+.miBb {
+  position: relative;
+  top:-7px;
+  margin-left: 20px;
+  font-size: 11px;
 }
 
 .miC {
@@ -422,16 +440,20 @@ form.bloggerr:hover {
   bottom: 30%;
 }
 
-
-
 .mystuff {
-  right: 20%;
+  right: 15%;
   top: 13%;
 }
 
 .menuadm {
+  position: fixed;
   top: 130px;
-  left: 475px;
+  left: 525px;
+  font-size: 15px;
+}
+
+.menuadm ul li a {
+  font-size: 10px;
 }
 
 #test, #status {
