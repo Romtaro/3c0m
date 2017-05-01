@@ -49,10 +49,10 @@ security:
 #TROUVER UN PUTIN DE MOYEN POUR SE DELOG' DU profiler
 
     access_control:
-        #- { path: ^/admin, role: ROLE_ADMIN }
-        #- { path: ^/res$, role: ROLE_USER }
-        #- { path: ^/faq, role: ROLE_USER }
-      #  - { path: ^/support, role: ROLE_USER }
-      #  - { path: ^/membre, role: ROLE_USER }
-      #  - { path: ^/gcompte, role: ROLE_ADMIN }
-      #  - { path: ^/galert, role: ROLE_ADMIN }
+        - { path: ^/admin, role: ROLE_ADMIN }
+        - { path: ^/res$, role: ROLE_USER }
+        - { path: ^/faq, role: ROLE_USER }
+        - { path: ^/support, role: ROLE_USER }
+        - { path: ^/membre, role: ROLE_USER }
+        - { path: ^/gcompte, role: ROLE_ADMIN }
+        - { path: ^/galert, role: ROLE_ADMIN }
