@@ -4,15 +4,19 @@ security:
 
     # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        in_memory:
-            memory:
-                users:
-                    draden:
-                          password: draden
-                          roles: 'ROLE_USER'
-                    admin:
-                          password: admin
-                          roles: 'ROLE_USER, ROLE_ADMIN'
+         mysql_provider:
+            entity:
+                class: ENTSiteBundle:Contact
+                property: pseudo
+      #  in_memory:
+      #      memory:
+      #          users:
+      #              draden:
+      #                    password: draden
+      #                    roles: 'ROLE_USER'
+      #              admin:
+      #                    password: admin
+      #                    roles: 'ROLE_USER, ROLE_ADMIN'
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -29,15 +33,22 @@ security:
             # activate different ways to authenticate
 
             # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticat
-
+        default:
+            anonymous: ~
+            form_login:
+              login_path: login
+              check_path: login
+              require_previous_session: false
+              default_target_path: /membre
+            provider: mysql_provider
+            logout:
+                path: /logout
+                target: /
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext
 #TROUVER UN PUTIN DE MOYEN POUR SE DELOG' DU profiler
 
     access_control:
-        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
-        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin, role: ROLE_ADMIN }
         - { path: ^/res$, role: ROLE_USER }
         - { path: ^/faq, role: ROLE_USER }

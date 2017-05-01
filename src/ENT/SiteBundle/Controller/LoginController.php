@@ -148,7 +148,7 @@ class LoginController extends Controller
             $pseu = $contact->getPseudo();
             $passw = $contact->getMdp();
             $email = $contact->getEmail();
-            //var_dump($request);
+            var_dump($form);
             //var_dump($request = $this->get('ENTSiteBundle.service.role')->isGranted('ROLE_ADMIN', $pseu));
             $find = $repository->findBy(array('pseudo' => $pseu, ));
 
@@ -194,6 +194,12 @@ class LoginController extends Controller
                     } else {
                         if ($status_bdd != 0) {
                             $stat = "Vous êtes Administrateur de niveau : " . $status_bdd . " : ";
+                            //get Entity Manager
+                            $em = $this->getDoctrine()->getManager();
+
+                            //write Entity in database
+                            //$em->persist($d);
+                            //$em->flush();
                             return $this->render('ENTSiteBundle:Admin:paneladmin.html.twig', array(
                               'pseudo' => $pseu,
                               'status' => $stat,

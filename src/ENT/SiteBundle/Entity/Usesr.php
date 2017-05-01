@@ -3,18 +3,19 @@
 
 namespace ENT\SiteBundle\Entity;
 
-use FOS\UserBundle\Model\User as BaseUser;
+//use FOS\UserBundle\Model\User as BaseUser;
 use FOS\UserBundle\Model\UserInterface;
 use FOS\UserBundle\Model\GroupableInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Security\Core\User\User;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="membre")
  */
-class User extends BaseUser
+class usersr //extends BaseUser
 {
     /**
  * @ORM\Id
