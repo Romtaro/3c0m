@@ -148,12 +148,13 @@ class LoginController extends Controller
             $pseu = $contact->getPseudo();
             $passw = $contact->getMdp();
             $email = $contact->getEmail();
-            var_dump($form);
+
             //var_dump($request = $this->get('ENTSiteBundle.service.role')->isGranted('ROLE_ADMIN', $pseu));
             $find = $repository->findBy(array('pseudo' => $pseu, ));
-
+            //$finde = $find->getRoles();
             $sess = $request->getSession();
-
+            $findo = $find[0]->getRoles();
+            var_dump($findo);
             //var_dump($sess);
             $pseu_bdd = $find[0]->getPseudo();
             $passw_bdd = $find[0]->getMdp();
@@ -198,17 +199,26 @@ class LoginController extends Controller
                             $em = $this->getDoctrine()->getManager();
 
                             //write Entity in database
-                            //$em->persist($d);
-                            //$em->flush();
-                            return $this->render('ENTSiteBundle:Admin:paneladmin.html.twig', array(
+                            $em->persist($find);
+                            $em->flush();
+                            $contente =  $this->get('templating')
+                                        ->render('ENTSiteBundle:Admin:paneladmin.html.twig', array(
                               'pseudo' => $pseu,
                               'status' => $stat,
                             ));
+                            return new Response($contente);
                         } else {
-                            return $this->render('ENTSiteBundle:Membre:panelmembre.html.twig', array(
+                            //get Entity Manager
+                          $em = $this->getDoctrine()->getManager();
+                          //write Entity in database
+                          $em->persist($find);
+                            $em->flush();
+                            $contentee = $this->get('templating')
+                            ->render('ENTSiteBundle:Membre:panelmembre.html.twig', array(
                                 'pseudo' => $pseu,
                                 'test' => $error,
                               ));
+                            return new Response($contentee);
                         }
                     }
                 }
