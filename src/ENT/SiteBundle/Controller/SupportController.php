@@ -12,7 +12,7 @@ class SupportController extends Controller
   {
     $content = $this
         ->get('templating')
-        ->render('ENTSiteBundle:Membre:support.html.twig', array('test' => "TEST Done !"));
+        ->render('ENTSiteBundle:Membre:support.html.twig', array('test' => "Support"));
 
 
       return new Response($content);
