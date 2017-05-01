@@ -45,12 +45,12 @@ class Documentation
      */
     private $taille;
 
-  //  /**
-  //   * @var \DateTime
-  //   *
-  //   * @ORM\Column(name="data_enregistrement", type="datetime")
-  //   */
-  //  private $dataEnregistrement;
+   /**
+    * @var \DateTime
+    *
+    * @ORM\Column(name="date_enregistrement", type="datetime")
+    */
+   private $dateEnregistrement;
 
 //    /**
   //   * @var int
@@ -145,25 +145,25 @@ class Documentation
     /**
      * Set dataEnregistrement
      *
-     * @param \DateTime $dataEnregistrement
+     * @param \DateTime $dateEnregistrement
      *
      * @return Documentation
      */
-    public function setDataEnregistrement($dataEnregistrement)
+    public function setDateEnregistrement($dateEnregistrement)
     {
-        $this->dataEnregistrement = $dataEnregistrement;
+        $this->dateEnregistrement = $dateEnregistrement;
 
         return $this;
     }
 
     /**
-     * Get dataEnregistrement
+     * Get dateEnregistrement
      *
      * @return \DateTime
      */
-    public function getDataEnregistrement()
+    public function getDateEnregistrement()
     {
-        return $this->dataEnregistrement;
+        return $this->dateEnregistrement;
     }
 
     /**

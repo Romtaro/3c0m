@@ -12,8 +12,8 @@ class FaqController extends Controller
   {
     $content = $this
         ->get('templating')
-        ->render('ENTSiteBundle:Membre:faq.html.twig', array('test' => "TEST Done !"));
-
+        ->render('ENTSiteBundle:Membre:faq.html.twig', array('test' => "FAQ"));
+      
 
       return new Response($content);
   }
