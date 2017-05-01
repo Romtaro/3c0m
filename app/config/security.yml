@@ -10,8 +10,8 @@ security:
         in_memory:
             memory:
                 users:
-                    draden:
-                          password: draden
+                    juju:
+                          password: soleil
                           roles: 'ROLE_USER'
                     admin:
                           password: admin
@@ -45,6 +45,16 @@ security:
     access_control:
         # require ROLE_ADMIN for /admin* ----- Changé en ROLE_USER pour le moment
         - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/galert, roles: ROLE_ADMIN }
+        - { path: ^/glaert, roles: ROLE_ADMIN }
+        - { path: ^/membre, roles: ROLE_USER }
+        - { path: ^/faq, roles: ROLE_USER }
+        - { path: ^/support, roles: ROLE_USER }
+        - { path: ^/res, roles: ROLE_USER }
+        - { path: ^/res/1, roles: ROLE_USER }
+        - { path: ^/res/, roles: ROLE_USER }
+
+
 
     encoders:
         ENT\SiteBundle\Security\User\WebserviceUser:
