@@ -16,7 +16,10 @@ class DocumentationController extends Controller
        ->getManager()
        ->getRepository('ENTSiteBundle:Documentation');
        //var_dump($repository);
-     // On récupère l'entité correspondante à l'id $id
+      // On récupère l'entité correspondante à l'id $idCat
+
+
+
      $documentation = $repository->findBy(
     array('idCat' => $idCat)
 

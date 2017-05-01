@@ -28,16 +28,20 @@ security:
 
             # activate different ways to authenticate
 
-            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
-
-
-
-
-
-
-    access_control:
-        # require ROLE_ADMIN for /admin* ----- Changé en ROLE_USER pour le moment
-        #- { path: ^/admin, roles: ROLE_ADMIN }
+            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticat
 
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext
+
+
+    access_control:
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin, role: ROLE_ADMIN }
+        - { path: ^/res$, role: ROLE_USER }
+        - { path: ^/faq, role: ROLE_USER }
+        - { path: ^/support, role: ROLE_USER }
+        - { path: ^/membre, role: ROLE_USER }
+        - { path: ^/gcompte, role: ROLE_ADMIN }
+        - { path: ^/galert, role: ROLE_ADMIN }

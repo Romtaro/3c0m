@@ -71,6 +71,22 @@ INSERT INTO `logiciels` (`id_logiciels`, `id_cat`, `nom`, `taille`, `date_enregi
 --
 
 CREATE TABLE `membre` (
+  'id'
+'password'
+'roles'
+'username' 
+'usernameCanonical'
+'email'
+'emailCanonical'
+'enabled'
+'salt'
+'plainPassword'
+'lastLogin'
+'confirmationToken'
+'passwordRequestedAt'
+'groups'
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
   `id_membre` int(3) NOT NULL,
   `pseudo` varchar(20) NOT NULL,
   `mdp` varchar(32) NOT NULL,
@@ -83,7 +99,7 @@ CREATE TABLE `membre` (
   `code_postal` int(5) UNSIGNED ZEROFILL NOT NULL,
   `adresse` varchar(50) NOT NULL,
   `statut` int(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 --
 -- Contenu de la table `membre`

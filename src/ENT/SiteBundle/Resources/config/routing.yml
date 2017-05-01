@@ -3,7 +3,7 @@ hello_the_world:
     defaults: { _controller: ENTSiteBundle:Login:connexion }
     requirements:
         _method: GET | POST
-        
+
 f_aq:
     path:     /faq
     defaults: { _controller: ENTSiteBundle:Faq:index }

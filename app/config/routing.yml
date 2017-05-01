@@ -5,3 +5,6 @@ ent_site:
 ent_site_admin:
     resource: "@ENTSiteBundle/Resources/config/admin/routing.yml"
     prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

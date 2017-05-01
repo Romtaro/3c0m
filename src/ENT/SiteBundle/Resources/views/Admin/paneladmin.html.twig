@@ -12,34 +12,123 @@
 
   <strong>{{ pseudo }}</strong>
   | paneladmin
-  <div id="status">
-    <h1>{{ status }}</h1>
-    {% if is_granted('ROLE_USER') %}
-      <a href="{{ path('lo_gin') }}">Delete</a>
-    {% endif %}
+  {#<div id="status">
+    <h1>{{ status }}
+      <strong>{{ pseudo }}</strong>
+    </h1>
+  </div>#}
+
+  <div id="notif">
+    Attention ! Exemple de message- Exemple de message- Exemple de message- Exemple de message- Exemple de message.
+    <a href="">
+      <i class="fa fa-times fa-2x"></i>
+    </a>
   </div>
-  <div >
-    <ul >
-    <li>
-      <a href="membre">
-        <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
-        Retour au tableau de bord (membre)</a>
-    </li>
-  </ul>
+
+  <div class="titlee">
+    <h1>Tableau de bord</h1>
+    <h4>Bienvenue sur votre interface client,
+      <strong>{{ pseudo|upper }}</strong>
+    </h4>
+  </div>
+
+  <div class="myinfo">
+    <h2>
+      <i class="fa fa-user fa-2x"></i>
+      Mes Informations</h1>
+  </h2>
+  <div class="miA">
+    <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+    <div class="miAa">
+      Nom client
+      <br/><br/>
+
+      04.00.00.00.00
+      <br/><br/>
+
+      support@exemple.compte
+      <br/><br/>
+
+      13, rue des oliviers
+      <br/>
+      13100 - Aix-en-Provence
+      <br/><br/>
+    </div>
+
+  </div>
 </div>
 
-<div >
-  <ul>
-    <li>
-      <a href="gcompte">
-        <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
-        Gestion des comptes (gcompte)</a>
-    </li><br/>
-    <li>
-      <a href="galert">
-        <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
-        Gestion des alertes (galert)</a>
-    </li>
-  </ul>
+<div class="mystuff">
+  <h2>
+    <i class="fa fa-suitcase fa-2x"></i>
+    Mon équipement</h1>
+</h2>
+<div class="miB">
+  <div class="miBa">
+    <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+    <h3>MATERIEL X</h3>
+    N° : M023 Type : CAT3
+  </div>
+
+  <div class="miBa">
+    <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+    <h3>MATERIEL X</h3>
+    N° : M023 Type : CAT3
+  </div>
+
+  <div class="miBa">
+    <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+    <h3>MATERIEL X</h3>
+    N° : M023 Type : CAT3
+  </div>
+
+  <div class="miBa">
+    <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+    <h3>MATERIEL X</h3>
+    N° : M023 Type : CAT3
+  </div>
+
+  <div class="miBa">
+    <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+    <h3>MATERIEL X</h3>
+    N° : M023 Type : CAT3
+  </div>
+
+  <div class="miBa">
+    <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+    <h3>MATERIEL X</h3>
+    N° : M023 Type : CAT3
+  </div>
+
+</div>
+
+</div>
+
+<div class="myactivity">
+<h2>
+  <i class="fa fa-tags fa-2x"></i>
+  Activité</h1>
+</h2>
+<div class="miC"></div>
+</div>
+
+<div class="menuadm">
+<ul>
+<li>
+<a href="membre">
+  <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+  Retour au tableau de bord (membre)</a>
+</li><br/>
+<li>
+<a href="gcompte">
+  <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+  Gestion des comptes (gcompte)</a>
+</li><br/>
+<li>
+<a href="galert">
+  <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+  Gestion des alertes (galert)</a>
+</li>
+</ul>
 </div>
 {% endblock %}

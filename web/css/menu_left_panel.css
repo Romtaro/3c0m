@@ -1,4 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Oxygen+Mono);
+obody {
+  font-family: 'Ubuntu Mono', Tahoma, Arial, sans-serif;
+}
+
 
 /* Starter CSS for Flyout Menu */
 
@@ -27,6 +30,7 @@
   line-height: 1em;
   vertical-align: middle;
   position: relative;
+  height: 210px;
 }
 
 #cssmenu ul li.hover, #cssmenu ul li:hover {
@@ -80,13 +84,13 @@
 #cssmenu {
   position: absolute;
   float: left;
-  width: 185px;
+  width: 205px;
   background: rgba(0, 0, 0, 0.1);
   height: 0;
-  font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
   font-size: 15px;
-  zoom: 1;
+  font-weight: bolder;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
 }
 
 #cssmenu:before {
@@ -101,7 +105,6 @@
 }
 
 #cssmenu a {
-  height: 52.5px;
   display: block;
   padding: 38px 15px 72px;
   color: #fff;
@@ -277,10 +280,10 @@ form.bloggerr:hover {
 
 #view_right {
   position: absolute;
-  left: 193px;
+  left: 213px;
   width: 89%;
   height: 100%;
-  margin: -8px;
+
 }
 
 .coloor {
@@ -296,6 +299,127 @@ form.bloggerr:hover {
   /**  background-color: rgba(200, 200, 200, 0.9);*/
 }
 
+#notif {
+  width: 92%;
+  background-color: rgba(150, 0, 0, 0.2);
+  border-radius: 30px;
+  height: 75px;
+  border: 1px solid red;
+  color: rgba(200, 25, 25, 0.9);
+  padding: 10px;
+  padding-top: 25px;
+  padding-left: 18%;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+  margin-left: 5%;
+  font-weight: bolder;
+}
+
+#notif a {
+  float: right;
+  text-decoration: none;
+  padding-right: 10px;
+}
+
+.titlee, .myinfo, .mystuff, .myactivity, .menuadm {
+  position: absolute;
+}
+
+.titlee {
+  left: 75px;
+}
+
+.titlee h1 {
+  font-size: 35px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.titlee h4 {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.myinfo {
+  position: fixed;
+  left: 15%;
+  top: 220px;
+}
+
+.miA {
+  width: 550px;
+  height: 250px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background-color: rgba(250, 250, 250, 0.2);
+  font-size: 75px;
+}
+
+.miA i {
+  padding: 2%;
+  padding-left: 50px;
+  padding-top: 25px;
+  font-size: 196px;
+}
+
+.miAa {
+  font-size: 18px;
+  position: absolute;
+  right: 5.5%;
+  top: 115px;
+}
+
+.miB {
+  width:155%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background-color: rgba(250, 250, 250, 0.2);
+  padding: 5px;
+  height: 500px;
+  display: inline-table;
+}
+
+.miBa i {
+  float: left;
+  margin-right: 25px;
+}
+
+.miBa {
+  margin: 5px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 5px;
+  min-height:100px;
+  padding: 2%;
+  padding-bottom: 3%;
+}
+
+.miC {
+  position: fixed;
+  width: 42%;
+  height: 28%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background-color: rgba(250, 250, 250, 0.2);
+}
+
+.myactivity {
+  position: fixed;
+  left: 15%;
+  bottom: 35.5%;
+}
+
+.mystuff {
+  right: 21%;
+  top: 170px;
+}
+
+.menuadm {
+  top: 130px;
+  left: 475px;
+}
+
 #test, #status {
   color: rgb(10, 210, 10);
   background-color: #777;
@@ -304,7 +428,8 @@ form.bloggerr:hover {
 }
 
 #status {
-  width: 550px;
+  width: 700px;
+  font-size: 14px;
 }
 
 .bloggerr-notice {
@@ -317,13 +442,15 @@ form.bloggerr:hover {
 }
 
 form.bloggerr {
+  margin-top: 75px;
   font-size: 16px;
   background-color: rgba(0, 0, 0, 0.1);
-  width: 450px;
+  width: 500px;
   padding: 25px;
   border-radius: 10px;
   position: absolute;
   left: 150px;
+  height: 350px;
 }
 
 form.bloggerr div {
@@ -385,6 +512,8 @@ form.bloggerr ul li {
   border-radius: 5px;
   padding-left: 50px;
   padding-right: 50px;
-  width: 200px;
+  width: 35%;
   text-transform: capitalize;
 }
+
+#d {}

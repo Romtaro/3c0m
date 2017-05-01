@@ -1,0 +1,38 @@
+{% extends 'base.menu.html.twig' %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/dropzone.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ asset('js/dropzone.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+  <div id="bg">
+    <div id="" style="color:white;">
+      <h1 style="display:inline-flex;">
+        {% block r_doc %}{% endblock %}
+        {% block r_log %}{% endblock %}
+
+      </h1>
+    </div>
+    {# {{ path('ajax_snippet_image_send') }}
+    <div class="dropzone my-dropzone" id="form_snippet_image" action="">
+      <script type="text/javascript" src="{{ asset('js/dropzone.js') }}"></script>
+    </div>
+#}
+    <div id="" style="">
+      <ul >
+        <li>
+          <a style="color:white;text-decoration:none;" href="{{ path('re_ssources') }}">
+            <i class="fa fa-fw fa-lg fa-tachometer"></i>
+            Retour sur /res simple. -> redirection vers ressources_error.html.twig (error car pas d'{id} selectionné [voir les routings de notre Bundle])
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

@@ -102,6 +102,14 @@ class Contact
    */
   private $statut;
 
+  /**
+   * @var int
+   *
+   * @ORM\Column(name="is_active", type="string", length=100)
+   */
+   private $roles;
+
+
 
   /**
    * Get id
@@ -400,4 +408,42 @@ class Contact
   {
       return $this->statut;
   }
+
+    /**
+     * Set the value of Id
+     *
+     * @param int id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of Roles
+     *
+     * @return int
+     */
+    public function getRoles()
+    {
+        return $this->roles;
+    }
+
+    /**
+     * Set the value of Roles
+     *
+     * @param int roles
+     *
+     * @return self
+     */
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
+
+        return $this;
+    }
 }

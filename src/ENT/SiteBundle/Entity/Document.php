@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="document")
+ * @ORM\Table(name="documentation")
  * @ORM\HasLifecycleCallbacks
  * @ORM\Entity(repositoryClass="ENT\SiteBundle\Repository\DocumentRepository")
  */
@@ -44,7 +44,7 @@ class Document
      */
     public function setFile(UploadedFile $file = null)
     {
-         $this->file = $file;
+        $this->file = $file;
         // check if we have an old image path
         if (isset($this->path)) {
             // store the old name to delete after the update
