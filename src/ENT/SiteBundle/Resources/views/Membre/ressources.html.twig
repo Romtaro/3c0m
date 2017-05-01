@@ -17,16 +17,33 @@
 
 {% endblock %}
 {% block body %}
-  <div id="" style="color:white;">
-    <h1 style="display:inline-flex;">
+  <div id="notif">
+    Attention ! Exemple de message- Exemple de message- Exemple de message- Exemple de message.
+    <a href="">
+      <i class="fa fa-times fa-2x"></i>
+    </a>
+  </div>
+  <div class="titlee">
+    <h1>Ressources</h1>
+    <h4>Bienvenue
+      {{ pseudo|upper }}. Vous trouverez ici des logiciels ainsi que de la documentation.
+    </h4>
+  </div>
+
+  <div class="myinfo" style="color:black;">
+    <h2>
+      <i class="fa fa-user fa-2x"></i>
+      Documentation
+    </h2>
+    <div class="miC" styles="display:inline-flex;">
+
       <table>
         <tr style="text-align:right;border: 1px solid black;">
           <th >Nom document</th>
-
         </tr>
 
         {% for contnom in v_nom %}
-          <tr style="border: 1px solid red;">
+          <tr style="border: 1px solid blue;">
             <th style="text-align:left;">{{ contnom }}</th>
           </tr>
         {% endfor %}
@@ -38,12 +55,12 @@
         </tr>
 
         {% for conttaille in v_taille %}
-          <tr style="border: 1px solid red;">
+          <tr style="border: 1px solid green;">
             <th style="text-align:left;">{{ conttaille }}</th>
           </tr>
         {% endfor %}
       </table>
-    </h1>
+    </div>
   </div>
 
   {# {{ path('ajax_snippet_image_send') }}
