@@ -46,9 +46,9 @@ class Documentation
     private $taille;
 
    /**
-    * @var \DateTime
+    * @var Date
     *
-    * @ORM\Column(name="date_enregistrement", type="datetime")
+    * @ORM\Column(name="date_enregistrement", type="date")
     */
    private $dateEnregistrement;
 
@@ -145,7 +145,7 @@ class Documentation
     /**
      * Set dataEnregistrement
      *
-     * @param \DateTime $dateEnregistrement
+     * @param Date $dateEnregistrement
      *
      * @return Documentation
      */
@@ -159,7 +159,7 @@ class Documentation
     /**
      * Get dateEnregistrement
      *
-     * @return \DateTime
+     * @return Date
      */
     public function getDateEnregistrement()
     {

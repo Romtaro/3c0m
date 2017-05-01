@@ -45,11 +45,15 @@ class DocumentationController extends Controller
              $nom = $doc->getNom();
              $taille = $doc->getTaille();
              $date = $doc->getDateEnregistrement();
+
              array_push($contnom, $nom);
              array_push($conttaille, $taille);
              array_push($contdate, $date);
              //array_remove($con)
-         }var_dump($contdate);
+         }
+
+
+         //var_dump($date);
          //var_dump($contnom);
          //var_dump($conttaille);
 
@@ -57,7 +61,7 @@ class DocumentationController extends Controller
 
          $content = $this
      ->get('templating')
-     ->render('ENTSiteBundle:Membre:ressources.html.twig', array('v_nom' => $contnom, 'v_taille' => $conttaille,  'v_date' => $contdate[0]));
+     ->render('ENTSiteBundle:Membre:ressources.html.twig', array('v_nom' => $contnom, 'v_taille' => $conttaille,  'v_date' => $contdate));
 //var_dump($content);
      // Le render ne change pas, on passait avant un tableau, maintenant un objet
 return new Response($content);
