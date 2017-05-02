@@ -153,9 +153,6 @@ INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `t
 (2, 'admin', 'admin', 'ad', 'min', 'admin@gmail.com', 610672054, 'm', 'Aix', 13100, '2 rue le corbusier', 1, 'ROLE_ADMIN', 'v1-s@lt');
 
 
---
--- AUTO_INCREMENT for dumped tables
---
 
 --
 -- AUTO_INCREMENT for table `membre`

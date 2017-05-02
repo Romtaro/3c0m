@@ -592,9 +592,9 @@ border-bottom: 1px solid black;
 }
 
 .menuadm {
-  position: fixed;
-  top: 130px;
-  left: 525px;
+  position: absolute;
+  top: 54px;
+  left: 265px;
   font-size: 15px;
 }
 
