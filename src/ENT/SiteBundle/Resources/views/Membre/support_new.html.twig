@@ -1,0 +1,90 @@
+{% extends 'base.menu.html.twig' %}
+{% block login %}
+
+	<li class="active">
+		<a class="ww" href="{{ path('lo_gin') }}">Déconnexion</a>
+	</li>
+
+{% endblock %}
+{% block body %}
+
+	<div id="notif">
+		Attention ! Exemple de message- Exemple de message- Exemple de message- Exemple de message.
+		<a href="">
+			<i class="fa fa-times fa-2x"></i>
+		</a>
+	</div>
+
+	<div class="titlee_sup">
+		<h1>Support</h1>
+		<h4>Bienvenue
+			<strong>{{ pseudo|upper }}</strong>. Un problème avec votre équipement ? C'est ici !
+			<strong>{{ check|upper }}</strong>
+		</h4>
+	</div>
+
+	<div class="ensemble-haut">
+		<div class="centre-left">
+			04.42.50.20.20
+			<br/>support@exemple.com
+			<br/>du lundi au vendredi<br/>
+			9h-12h/14h-18h
+		</div>
+		<div class="centre active">
+			<a href="{{ path('su_pport') }}new">
+				<h4>
+					<i class="fa fa-user-md fa-2x"></i><br/>
+					Nouveau SAV
+				</h4>
+			</a>
+		</div>
+		<div class="centre-right">
+			<a href="{{ path('su_pport') }}suivi">
+				<h4>
+					<i class="fa fa-hourglass-start fa-2x"></i><br/>Suivre un SAV
+				</h4>
+			</a>
+		</div>
+		<div class="bas-left">
+			<a href="{{ path('su_pport') }}historique">
+				<h4>
+					<i class="fa fa-sort-alpha-asc fa-2x"></i><br/>Historique des SAV
+				</h4>
+			</a>
+		</div>
+	</div>
+
+	<div class="ensemble-bas">
+		<div class="EBl">Équipements concernant la maintenance :
+			<select>
+				<option>A</option>
+				<option>B</option>
+			</select>
+
+			N° :
+			<select>
+				<option>A</option>
+				<option>B</option>
+			</select>
+
+			Description du problème :
+			<select>
+				<option>A</option>
+				<option>B</option>
+			</select>
+		</div>
+		<div class="EBr">Joindre les logs :
+			<select>
+				<option>A</option>
+				<option>B</option>
+			</select>
+
+			Joindre des photos :
+			<select>
+				<option>A</option>
+				<option>B</option>
+			</select>
+			<input type="submit" class="EBbutton" value="ENVOYER"></input>
+		</div>
+
+	{% endblock %}

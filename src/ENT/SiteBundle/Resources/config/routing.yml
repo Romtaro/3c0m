@@ -35,7 +35,11 @@ re_ssources_id_1:
     defaults: { _controller: ENTSiteBundle:Documentation:view }
 
 su_pport:
-    path:     /support
+    path:     /support/
+    defaults: { _controller: ENTSiteBundle:Support:index }
+
+su_pport_id:
+    path:     /support/{id}
     defaults: { _controller: ENTSiteBundle:Support:index }
 
 

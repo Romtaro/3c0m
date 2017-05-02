@@ -1,16 +1,18 @@
 {% extends 'base.menu.html.twig' %}
 {% block login %}
 
-  <li class="active">
-    <a class="ww" href="{{ path('lo_gin') }}">Déconnexion</a>
-  </li>
+	<li class="active">
+		<a class="ww" href="{{ path('lo_gin') }}">Déconnexion</a>
+	</li>
 
 {% endblock %}
 {% block body %}
-  faq
-  <div id="test">
-    <h1>
-      {{ test|upper }}
-    </h1>
-  </div>
+	faq
+	<div class="titlee_sup">
+		<h1>Faq</h1>
+		<h4>Bienvenue Bienvenue
+			<strong>{{ pseudo|upper }}</strong>. Une question ? La réponse est probablement ici !
+			<strong>{{ check|upper }}</strong>
+		</h4>
+	</div>
 {% endblock %}

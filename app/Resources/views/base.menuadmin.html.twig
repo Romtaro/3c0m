@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8"/>
+	<head>
+		<meta charset="UTF-8"/>
 
-    <title>
-      {% block title %}
-        3c0m - SAV
-      {% endblock %}
-    </title>
-    <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/menu_left_panel.css') }}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    {% block stylesheets %}{% endblock %}
-    {% block javascripts %}{% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ asset('icon.ico') }}"/>
-  </head>
-  <body>
-    <style type="text/css"></style>
-    <div id="cssmenu">
-      <ul>
-        <li>
-          <a href="{{ path('panel_admin') }}">
-            <i class="fa fa-fw fa-3x fa-tachometer"></i><br/>
-            Tableau de Bord</a>
-        </li>
-        <li class="has-sub">
-          <a href="{{ path('re_ssources_id_1') }}">
-            <i class="fa fa-fw fa-3x fa-folder-open-o"></i><br/>
-            Ressources</a>
-          <!--<ul>
+		<title>
+			{% block title %}
+				3c0m - SAV
+			{% endblock %}
+		</title>
+		<link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/menu_left_panel.css') }}">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		{% block stylesheets %}{% endblock %}
+		{% block javascripts %}{% endblock %}
+		<link rel="icon" type="image/x-icon" href="{{ asset('icon.ico') }}"/>
+	</head>
+	<body>
+		<style type="text/css"></style>
+		<div id="cssmenu">
+			<ul>
+				<li>
+					<a href="{{ path('panel_admin') }}">
+						<i class="fa fa-fw fa-3x fa-tachometer"></i><br/>
+						Tableau de Bord</a>
+				</li>
+				<li>
+					<a href="{{ path('re_ssources_id_1') }}">
+						<i class="fa fa-fw fa-3x fa-folder-open-o"></i><br/>
+						Ressources</a>
+					<!--<ul>
             <li class="has-sub">
               <a href="#">Menu 1</a>
                <ul>
@@ -44,27 +44,38 @@
               <a href="#">Menu 2</a>
             </li>
       </ul>-->
-        </li>
-        <li>
-          <a href="{{ path('su_pport') }}">
-            <i class="fa fa-cog fa-spin fa-3x fa-fw"></i><br/>
-            <span class="sr-only">Loading...</span>
-            {# }<i class="fa far fa-fw fa-support"></i> #}
-            Support</a>
-        </li>
-        <li>
-          <a href="{{ path('f_aq') }}">
-            <i class="fa fa-fw fa-3x fa-phone"></i><br/>
-            FAQ</a>
-        </li>
-        {% block login %}{% endblock %}
-      </ul>
-    </div>
+				</li>
+				<li class="has-sub">
+					<a href="{{ path('su_pport') }}new">
+						<i class="fa fa-cog fa-spin fa-3x fa-fw"></i><br/>
+						<span class="sr-only">Loading...</span>
+						{# }<i class="fa far fa-fw fa-support"></i> #}
+						Support</a>
+					<ul>
+						<li>
+							<a href="{{ path('su_pport') }}new">Nouveau SAV</a>
+						</li>
+						<li>
+							<a href="{{ path('su_pport') }}suivi">Suivre un SAV</a>
+						</li>
+						<li>
+							<a href="{{ path('su_pport') }}historique">Historique des SAV</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="{{ path('f_aq') }}">
+						<i class="fa fa-fw fa-3x fa-phone"></i><br/>
+						FAQ</a>
+				</li>
+				{% block login %}{% endblock %}
+			</ul>
+		</div>
 
-    <div id="view_right">
+		<div id="view_right">
 
-      {% block body %}{% endblock %}
-    </div>
-    {% block body2 %}{% endblock %}
-  </body>
+			{% block body %}{% endblock %}
+		</div>
+		{% block body2 %}{% endblock %}
+	</body>
 </html>

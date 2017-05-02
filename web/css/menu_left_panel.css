@@ -1,5 +1,6 @@
-obody {
+body {
   font-family: 'Ubuntu Mono', Tahoma, Arial, sans-serif;
+
 }
 
 
@@ -38,6 +39,8 @@ obody {
   position: relative;
   z-index: 599;
   cursor: default;
+  transition: all 1.4s ease-out;
+
 }
 
 #cssmenu ul ul {
@@ -60,6 +63,8 @@ obody {
 
 #cssmenu ul li:hover>ul {
   visibility: visible;
+  transition: all 1.4s ease-out;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 
 #cssmenu ul ul {
@@ -125,28 +130,35 @@ obody {
 
 #cssmenu ul ul {
   width: 200px;
+  height: 80px;
+  margin-top: 20px;
 }
 
 #cssmenu>ul>li>a {
   /**  border-right: 4px solid #1b9bff;*/
   color: #fff;
   border-radius: 5px;
+  transition: all .4s ease-out;
+
 }
 
 #cssmenu>ul>li>a:hover {
   color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
-  transition: all .4s ease-out;
+  transition: all 1.4s ease-out;
   background-color: rgba(50, 70, 70, 0.7);
   height: 135px;
 }
 
 #cssmenu>ul>li.active a {
   background: green;
+
 }
 
 #cssmenu>ul>li a:hover, #cssmenu>ul>li:hover a {
-  color: green;
+  color: white;
+  transition: all 1.4s ease-out;
+
 }
 
 #cssmenu li {
@@ -154,17 +166,19 @@ obody {
 }
 
 #cssmenu ul li.has-sub>a:after {
-  content: '';
+  content: '+';
   position: absolute;
   top: 50%;
   right: 15px;
   margin-top: -6px;
+
 }
 
 #cssmenu ul ul li.first {
   -webkit-border-radius: 0 3px 0 0;
   -moz-border-radius: 0 3px 0 0;
   border-radius: 0 3px 0 0;
+
 }
 
 #cssmenu ul ul li.last {
@@ -172,34 +186,48 @@ obody {
   -moz-border-radius: 0 0 3px 0;
   border-radius: 0 0 3px 0;
   border-bottom: 0;
+
 }
 
 #cssmenu ul ul {
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-}
 
-#cssmenu ul ul {
-  border: 1px solid #0082e7;
-}
-
-#cssmenu ul ul a {
-  font-size: 19px;
-  color: #fff;
-}
-
-#cssmenu ul ul a:hover {
-  color: green;
 }
 
 #cssmenu ul ul li {
-  border-bottom: 1px solid #0082e7;
+  height: 30px;
+}
+
+#cssmenu ul ul a {
+  font-size: 14px;
+  color: #fff;
+
+}
+
+#cssmenu ul ul a:hover {
+  color: black;
+  transition: all .4 ease-out;
+}
+
+#cssmenu ul ul li {
+  border-bottom: 1px solid grey;
+  background-color: rgba(150, 150, 150, 0.95);
+
 }
 
 #cssmenu ul ul li:hover>a {
-  background: #4eb1ff;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 5.9 ease-out;
   color: green;
+}
+
+#cssmenu ul ul li a {
+    height: 30px;
+    padding: 5px;
+    color: green;
 }
 
 #cssmenu.align-right>ul>li>a {
@@ -283,9 +311,10 @@ form.bloggerr:hover {
 
 #view_right {
   position: absolute;
-  left: 213px;
+  left: 12.2%;
   width: 89%;
   height: 100%;
+  background-color: rgba(170, 170, 170, 0.2);
 
 }
 
@@ -345,8 +374,8 @@ form.bloggerr:hover {
 
 .myinfo, .mydoc, .mylogi, .mymedia {
   position: absolute;
-  left: 2%;
-  top: 150px;
+  left: 4%;
+  top: 140px;
 }
 
 .titlee_sup {
@@ -366,7 +395,7 @@ form.bloggerr:hover {
   height: 200px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  background-color: rgba(250, 250, 250, 0.2);
+  background-color: rgba(250, 250, 250, 0.7);
   font-size: 55px;
 }
 
@@ -421,7 +450,7 @@ form.bloggerr:hover {
   width:350px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  background-color: rgba(250, 250, 250, 0.2);
+  background-color: rgba(250, 250, 250, 0.7);
   padding: 5px;
   height: auto;
   max-height: 470px;
@@ -465,10 +494,10 @@ form.bloggerr:hover {
 .miC {
   position: absolute;
   width: 500px;
-  height: 175px;
+  height: 190px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  background-color: rgba(250, 250, 250, 0.2);
+  background-color: rgba(250, 250, 250, 0.7);
 }
 
 .miD {
@@ -534,14 +563,14 @@ border-bottom: 1px solid black;
   border: 1px solid black;
   height: 180px;
   border-radius: 5px;
-  background-color: rgba(250, 250, 250, 0.2);
+  background-color: rgba(250, 250, 250, 0.7);
   padding-left: 5px;
 }
 
 .myactivity {
   position: absolute;
-  left: 2%;
-  bottom: 30%;
+  left: 4%;
+  bottom: 32%;
 }
 
 .mystuff {
@@ -550,7 +579,7 @@ border-bottom: 1px solid black;
 }
 
 .mydoc, .mymedia {
-  left:0%;
+  left:3  %;
 }
 
 .mylogi {
@@ -592,16 +621,37 @@ border-bottom: 1px solid black;
   top: 20%;
   left:3%;
   width: 1000px;
-  height: auto;
   display: inline-flex;
+  background-color: rgba(250, 250, 250, 0.7);
+}
+
+.ensemble-haut {
+  height: 150px;
+  padding: 50px;
+  padding-top: 14px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.centre a, .centre-right a, .bas-left a {
+  color: inherit;
+}
+
+.centre a:hover, .centre-right a:hover, .bas-left a:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 .ensemble-bas {
+  display: table;
   top:50%;
+/**  border: 1px dashed red; */
+  padding: 15px;
+  height: 45%;
 }
 
-.centre {
-  background-color: rgba(0, 0, 0, 0.3);
+.active {
+  background-color: rgba(90, 90, 90, 0.7);
 }
 
 .centre, .centre-right, .bas-left {
@@ -624,22 +674,41 @@ font-weight: bolder;
 }
 
 .centre, .centre-left, .centre-right, .bas-left {
-  width: 260px;
+  width: 280px;
   height: 125px;
   border: 1px solid grey;
-  margin-right: 10px;
+  margin-right: 9px;
 }
 
 .centre:hover, .centre-left:hover, .centre-right:hover, .bas-left:hover {
   -webkit-filter: invert(30%);/* Safari 6.0 - 9.0 */
 filter: invert(30%);
 cursor:pointer;
+text-decoration: none;
 }
 
 .centre-left {
   padding: 12px;
   padding-left: 17px;
   line-height: 25px;
+}
+
+.EBl, .EBr {
+  display: grid;
+}
+
+.EBl  {
+  float: left;
+  margin-left: 3%;
+}
+
+.EBr {
+  float: right;
+  margin-right: 52%;
+}
+
+.EBl select, .EBr select {
+  margin-bottom: 15px;
 }
 
 .bloggerr-notice {

@@ -43,7 +43,7 @@ twig:
         error: null
         status: null
         check: "%check%"
-        pseudo: '{token}'
+        pseudo: 'CLIENT'
 
 # Doctrine Configuration
 doctrine:

@@ -7,17 +7,27 @@ use Symfony\Component\HttpFoundation\Response;
 
 class SupportController extends Controller
 {
+    public function indexAction($id)
+    {
+        if ($id == "new") {
+            $content = $this
+    ->get('templating')
+    ->render('ENTSiteBundle:Membre:support_new.html.twig', array('test' => "Support"));
+            return new Response($content);
+        }
 
-  public function indexAction()
-  {
-    $content = $this
-        ->get('templating')
-        ->render('ENTSiteBundle:Membre:support.html.twig', array('test' => "Support"));
+        if ($id == "historique") {
+            $content = $this
+      ->get('templating')
+      ->render('ENTSiteBundle:Membre:support_histo.html.twig', array('test' => "Support"));
+            return new Response($content);
+        }
 
-
-      return new Response($content);
-
-  }
-
-
+        if ($id == "suivi") {
+            $content = $this
+      ->get('templating')
+      ->render('ENTSiteBundle:Membre:support_follow.html.twig', array('test' => "Support"));
+            return new Response($content);
+        }
+    }
 }
