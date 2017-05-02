@@ -325,20 +325,20 @@ form.bloggerr:hover {
   padding-right: 10px;
 }
 
-.titlee, .myinfo, .mystuff, .myactivity, .menuadm, .mydoc {
+.titlee, .titlee_sup, .myinfo, .mystuff, .myactivity, .menuadm, .mydoc {
   position: absolute;
 }
 
-.titlee {
+.titlee, .titlee_sup {
   left: 2%;
 }
 
-.titlee h1 {
+.titlee h1, .titlee_sup h1 {
   font-size: 35px;
   color: rgba(0, 0, 0, 0.8);
 }
 
-.titlee h4 {
+.titlee h4, .titlee_sup h4 {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.65);
 }
@@ -347,6 +347,18 @@ form.bloggerr:hover {
   position: absolute;
   left: 2%;
   top: 150px;
+}
+
+.titlee_sup {
+  top:6%;
+}
+
+.titlee_sup h1 {
+  font-size: 25px;
+}
+
+.titlee_sup h4 {
+  font-size: 15px;
 }
 
 .miA {
@@ -513,8 +525,7 @@ border-bottom: 1px solid black;
   padding-bottom: 1px;
   padding-left: 4px;
   padding-right: 3px;
-    letter-spacing: 1px;
-
+  letter-spacing: 1px;
 }
 
 .miE {
@@ -574,6 +585,61 @@ border-bottom: 1px solid black;
   left:50px;
   width: 700px;
   font-size: 14px;
+}
+
+.ensemble-haut, .ensemble-bas {
+  position: absolute;
+  top: 20%;
+  left:3%;
+  width: 1000px;
+  height: auto;
+  display: inline-flex;
+}
+
+.ensemble-bas {
+  top:50%;
+}
+
+.centre {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.centre, .centre-right, .bas-left {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
+  color: rgba(0, 0, 0, 0.5);
+
+}
+
+.centre h4 i, .centre-right h4 i, .bas-left h4 i {
+  font-size: 45px;
+  padding-bottom: 15px;
+  color:wh;
+}
+
+.centre h4, .centre-right h4, .bas-left h4 {
+font-weight: bolder;
+}
+
+.centre, .centre-left, .centre-right, .bas-left {
+  width: 260px;
+  height: 125px;
+  border: 1px solid grey;
+  margin-right: 10px;
+}
+
+.centre:hover, .centre-left:hover, .centre-right:hover, .bas-left:hover {
+  -webkit-filter: invert(30%);/* Safari 6.0 - 9.0 */
+filter: invert(30%);
+cursor:pointer;
+}
+
+.centre-left {
+  padding: 12px;
+  padding-left: 17px;
+  line-height: 25px;
 }
 
 .bloggerr-notice {

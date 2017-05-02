@@ -1,159 +1,183 @@
 {% extends 'base.menuadmin.html.twig' %}
 {% block stylesheets %}{% endblock %}
+
 {% block login %}
 
-  <li class="active">
-    <a class="ww" href="{{ path('lo_gin') }}">Déconnexion</a>
-  </li>
+	<li class="active">
+		<a class="ww" href="{{ path('lo_gin') }}">Déconnexion</a>
+	</li>
 
 {% endblock %}
 
 {% block body %}
 
-  {#<strong>{{ pseudo }}</strong>
+	{#
   | paneladmin
   <div id="status">
     <h1>{{ status }}
       <strong>{{ pseudo }}</strong>
     </h1>
-  </div>#}
+  </div> #}
 
-  <div id="notif">
-    Attention ! Exemple de message- Exemple de message- Exemple de message- Exemple de message.
-    <a href="">
-      <i class="fa fa-times fa-2x"></i>
-    </a>
-  </div>
+	<div id="notif">
+		Attention ! Exemple de message- Exemple de message- Exemple de message- Exemple de message.
+		<a href="">
+			<i class="fa fa-times fa-2x"></i>
+		</a>
+	</div>
 
-  <div class="titlee">
-    <h1>Tableau de bord</h1>
-    <h4>Bienvenue sur votre interface Administrateur,
-      <strong>{{ pseudo|upper }}</strong>
-    </h4>
-  </div>
+	<div class="titlee">
+		<h1>Tableau de bord</h1>
+		<h4>Bienvenue sur votre interface Administrateur,
+			<strong>{{ pseudo|upper }}</strong>
+		</h4>
+	</div>
 
-  <div class="myinfo">
-    <h2>
-      <i class="fa fa-user fa-2x"></i>
-      Mes Informations</h1>
-  </h2>
-  <div class="miA">
-    <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
-    <div class="miAa">
-      Nom client
-      <br/><br/>
+	<div class="myinfo">
+		<h2>
+			<i class="fa fa-user fa-2x"></i>
+			Mes Informations
+		</h2>
+		<div class="miA">
+			<div class="miA1">
+				<i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+			</div>
+			<div class="miAX">
+				<div class="miA0">
+					<div class="miBa">
+						<i class="fa fa-user fa-lg" aria-hidden="true"></i>
+					</div>
+					<div class="miBb">
+						<h4>Nom client</h4>
 
-      04.00.00.00.00
-      <br/><br/>
+					</div>
+				</div>
+				<div class="miA0">
+					<div class="miBa">
+						<i class="fa fa-phone fa-lg" aria-hidden="true"></i>
+					</div>
+					<div class="miBb">
+						<h4>04.00.00.00.00</h4>
 
-      support@exemple.compte
-      <br/><br/>
+					</div>
+				</div>
+				<div class="miA0">
+					<div class="miBa">
+						<i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+					</div>
+					<div class="miBb">
+						<h4>support@exemple.compte</h4>
 
-      13, rue des oliviers
-      <br/>
-      13100 - Aix-en-Provence
-      <br/><br/>
-    </div>
+					</div>
+				</div>
+				<div class="miA0">
+					<div class="miBa">
+						<i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+					</div>
+					<div class="miBb">
+						<h4>13, rue des oliviers 13100
+							<br/>
+							- Aix-en-Provence</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  </div>
-</div>
+	<div class="mystuff">
+		<h2>
+			<i class="fa fa-suitcase fa-2x"></i>
+			Mon équipement
+		</h2>
+		<div class="miB">
 
-<div class="mystuff">
-  <h2>
-    <i class="fa fa-suitcase fa-2x"></i>
-    Mon équipement
-  </h2>
-  <div class="miB">
+			<div class="miB0">
+				<div class="miBa">
+					<i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+				</div>
+				<div class="miBb">
+					<h3>MATERIEL X</h3>
+					<p>N° : M023 Type : CAT3</p>
+				</div>
+			</div>
 
-    <div class="miB0">
-      <div class="miBa">
-        <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
-      </div>
-      <div class="miBb">
-        <h3>MATERIEL X</h3>
-        <p>N° : M023 Type : CAT3</p>
-      </div>
-    </div>
+			<div class="miB0">
+				<div class="miBa">
+					<i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+				</div>
+				<div class="miBb">
+					<h3>MATERIEL X</h3>
+					<p>N° : M023 Type : CAT3</p>
+				</div>
+			</div>
 
-    <div class="miB0">
-      <div class="miBa">
-        <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
-      </div>
-      <div class="miBb">
-        <h3>MATERIEL X</h3>
-        <p>N° : M023 Type : CAT3</p>
-      </div>
-    </div>
+			<div class="miB0">
+				<div class="miBa">
+					<i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+				</div>
+				<div class="miBb">
+					<h3>MATERIEL X</h3>
+					<p>N° : M023 Type : CAT3</p>
+				</div>
+			</div>
 
-    <div class="miB0">
-      <div class="miBa">
-        <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
-      </div>
-      <div class="miBb">
-        <h3>MATERIEL X</h3>
-        <p>N° : M023 Type : CAT3</p>
-      </div>
-    </div>
+			<div class="miB0">
+				<div class="miBa">
+					<i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+				</div>
+				<div class="miBb">
+					<h3>MATERIEL X</h3>
+					<p>N° : M023 Type : CAT3</p>
+				</div>
+			</div>
 
-    <div class="miB0">
-      <div class="miBa">
-        <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
-      </div>
-      <div class="miBb">
-        <h3>MATERIEL X</h3>
-        <p>N° : M023 Type : CAT3</p>
-      </div>
-    </div>
+			<div class="miB0">
+				<div class="miBa">
+					<i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+				</div>
+				<div class="miBb">
+					<h3>MATERIEL X</h3>
+					<p>N° : M023 Type : CAT3</p>
+				</div>
+			</div>
 
-    <div class="miB0">
-      <div class="miBa">
-        <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
-      </div>
-      <div class="miBb">
-        <h3>MATERIEL X</h3>
-        <p>N° : M023 Type : CAT3</p>
-      </div>
-    </div>
+			<div class="miB0">
+				<div class="miBa">
+					<i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
+				</div>
+				<div class="miBb">
+					<h3>MATERIEL X</h3>
+					<p>N° : M023 Type : CAT3</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <div class="miB0">
-      <div class="miBa">
-        <i class="fa fa-file-image-o fa-5x" aria-hidden="true"></i>
-      </div>
-      <div class="miBb">
-        <h3>MATERIEL X</h3>
-        <p>N° : M023 Type : CAT3</p>
-      </div>
-    </div>
+	<div class="myactivity">
+		<h2>
+			<i class="fa fa-tags fa-2x"></i>
+			Activité
+		</h2>
+		<div class="miC"></div>
+	</div>
 
-  </div>
-
-</div>
-
-<div class="myactivity">
-  <h2>
-    <i class="fa fa-tags fa-2x"></i>
-    Activité</h1>
-</h2>
-<div class="miC"></div>
-</div>
-
-<div class="menuadm">
-<ul>
-<li>
-  <a href="membre">
-    <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
-    Retour au tableau de bord (membre)</a>
-</li><br/>
-<li>
-  <a href="gcompte">
-    <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
-    Gestion des comptes (gcompte)</a>
-</li><br/>
-<li>
-  <a href="galert">
-    <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
-    Gestion des alertes (galert)</a>
-</li>
-</ul>
+	<div class="menuadm">
+		<ul>
+		<li>
+			<a href="membre">
+				<i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+				Retour au tableau de bord (membre)</a>
+		</li><br/>
+		<li>
+			<a href="gcompte">
+				<i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+				Gestion des comptes (gcompte)</a>
+		</li><br/>
+		<li>
+			<a href="galert">
+				<i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+				Gestion des alertes (galert)</a>
+		</li>
+	</ul>
 </div>
 {% endblock %}
