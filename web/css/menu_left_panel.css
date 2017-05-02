@@ -366,18 +366,43 @@ form.bloggerr:hover {
   font-size: 19px;
 }
 
-.miA i {
+.miA1 {
+  width: 35%;
+  height: auto;
+  float: left;
+}
+
+.miA1 i {
   padding: 2%;
   padding-left: 45px;
   padding-top: 20px;
-  font-size: 156px;
+  font-size: 155px;
 }
 
-.miAa {
-  font-size: 13px;
-  position: absolute;
-  right: 7%;
-  top: 75px;
+.miA0 {
+  display: inline-block;
+}
+
+.miA0 .miBa i {
+  padding: 7px;
+  font-size: 20px;
+  float: left;
+}
+
+.miA0 .miBb h4 {
+  font-size: 12px;
+  padding-top: 5px;
+  margin-left: 25px;
+}
+
+.miAX {
+  width: 45%;
+  margin-left: 80px;
+  font-size: 12px;
+  /** border: 1px solid rgba(0, 0, 0, 0.2);*/
+  border-radius: 5px;
+  height:auto;
+  display: inline-grid;
 }
 
 .miB {

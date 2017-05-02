@@ -41,7 +41,7 @@ class CheckAuthController extends Controller
 
             $test = "e";
 
-            var_dump($request);
+            var_dump($roles_bdd);
 
             if ($status_bdd == 1) {
                 $conte =  $this
