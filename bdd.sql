@@ -76,25 +76,25 @@ CREATE TABLE `logiciels` (
 --
 
 INSERT INTO `logiciels` (`id_logiciels`, `id_cat`, `nom`, `taille`, `date_enregistrement`) VALUES
-(1, 2, 'exemple_log.exe', 1145, '1992-07-10'),
-(2, 1, 'raafzd.exe', 2897, '2017-05-14'),
-(3, 1, 'raafzd.exe', 2897, '2017-05-14'),
-(4, 3, 'test654.exe', 2897, '2017-05-14'),
-(5, 1, 'virus.bat', 7846, '1999-05-14'),
-(6, 1, 'logiciels1.exe', 2897, '2017-05-14'),
-(7, 3, 'coucou.exe', 7921, '2017-05-15'),
-(8, 2, 'exemple_log.exe', 1145, '1992-07-10'),
-(9, 1, 'raafzd.exe', 2897, '2017-05-14'),
-(10, 1, 'raafzd.exe', 2897, '2017-05-14'),
-(11, 1, 'test654.exe', 2897, '2017-05-14'),
-(12, 3, 'virus.bat', 7846, '1999-05-14'),
-(13, 3, 'logiciels1.exe', 2897, '2017-05-14'),
-(14, 3, 'coucou.exe', 7921, '2017-05-15'),
-(15, 2, 'exemple_log.exe', 1145, '1992-07-10'),
-(16, 1, 'raafzd.exe', 2897, '2017-05-14'),
-(17, 1, 'raafzd.exe', 2897, '2017-05-14'),
-(18, 1, 'test654.exe', 2897, '2017-05-14'),
-(19, 1, 'virus.bat', 7846, '1999-05-14');
+(1, 2, 'exemple-logiciel.exe', 1145, '1992-07-10'),
+(2, 1, 'exemple-logiciel.exe', 2897, '2017-05-14'),
+(3, 1, 'exemple-logiciel.exe', 2897, '2017-05-14'),
+(4, 3, 'exemple-logiciel.exe', 2897, '2017-05-14'),
+(5, 1, 'exemple-logiciel.exe', 7846, '1999-05-14'),
+(6, 1, 'exemple-logiciel.exe', 2897, '2017-05-14'),
+(7, 3, 'exemple-logiciel.exe', 7921, '2017-05-15'),
+(8, 2, 'exemple-logiciel.exe', 1145, '1992-07-10'),
+(9, 1, 'exemple-logiciel.exe', 2897, '2017-05-14'),
+(10, 1, 'exemple-logiciel.exe', 2897, '2017-05-14'),
+(11, 1, 'exemple-logiciel.exe', 2897, '2017-05-14'),
+(12, 3, 'exemple-logiciel.exe', 7846, '1999-05-14'),
+(13, 3, 'exemple-logiciel.exe', 2897, '2017-05-14'),
+(14, 3, 'exemple-logiciel.exe', 7921, '2017-05-15'),
+(15, 2, 'exemple-logiciel.exe', 1145, '1992-07-10'),
+(16, 1, 'exemple-logiciel.exe', 2897, '2017-05-14'),
+(17, 1, 'exemple-logiciel.exe', 2897, '2017-05-14'),
+(18, 1, 'exemple-logiciel.exe', 2897, '2017-05-14');
+
 
 -- --------------------------------------------------------
 
