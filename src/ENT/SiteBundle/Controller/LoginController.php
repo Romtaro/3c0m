@@ -47,8 +47,8 @@ class LoginController extends Controller
             //var_dump($roles_bdd);
             $sess = $request->getSession();
             $user = new WebserviceUser($pseu, $passw, null, array($roles_bdd));
-            //var_dump($request);
-            
+            var_dump($request);
+
 
 
 
