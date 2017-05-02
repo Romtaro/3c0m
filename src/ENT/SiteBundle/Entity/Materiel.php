@@ -15,18 +15,12 @@ class Materiel
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="id_materiel", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id_materiel", type="bigint", unique=true)
-     */
-    private $idMateriel;
 
     /**
      * @var int
@@ -91,29 +85,6 @@ class Materiel
         return $this->idMateriel;
     }
 
-    /**
-     * Set idMembre
-     *
-     * @param integer $idMembre
-     *
-     * @return Materiel
-     */
-    public function setIdMembre($idMembre)
-    {
-        $this->idMembre = $idMembre;
-
-        return $this;
-    }
-
-    /**
-     * Get idMembre
-     *
-     * @return int
-     */
-    public function getIdMembre()
-    {
-        return $this->idMembre;
-    }
 
     /**
      * Set idCat

@@ -33,7 +33,8 @@ CREATE TABLE `documentation` (
   `id_cat` int(1) DEFAULT NULL,
   `nom` varchar(40) NOT NULL,
   `taille` int(5) NOT NULL,
-  `date_enregistrement` date NOT NULL
+  `date_enregistrement` date NOT NULL,
+  PRIMARY KEY (`id_documentation`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -68,7 +69,8 @@ CREATE TABLE `logiciels` (
   `id_cat` int(1) DEFAULT NULL,
   `nom` varchar(40) NOT NULL,
   `taille` int(5) NOT NULL,
-  `date_enregistrement` date NOT NULL
+  `date_enregistrement` date NOT NULL,
+  PRIMARY KEY (`id_logiciels`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -107,7 +109,8 @@ CREATE TABLE `materiel` (
   `id_membre` int(3) NOT NULL,
   `id_cat` int(1) NOT NULL,
   `nom` varchar(40) NOT NULL,
-  `number` varchar(20) NOT NULL
+  `number` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_materiel`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -137,7 +140,8 @@ CREATE TABLE `membre` (
   `adresse` varchar(50) NOT NULL,
   `statut` int(1) NOT NULL DEFAULT '0',
   `is_active` varchar(100) DEFAULT 'ROLE_USER',
-  `salt` text
+  `salt` text,
+  PRIMARY KEY (`id_membre`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -148,33 +152,6 @@ INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `t
 (1, 'juju', 'soleil', 'Cottet', 'Julien', 'julien.cottet@gmail.com', 2147483647, 'm', 'Marseille', 13010, '300 rue de la chance', 0, 'ROLE_USER', 'v1-s@lt'),
 (2, 'admin', 'admin', 'ad', 'min', 'admin@gmail.com', 610672054, 'm', 'Aix', 13100, '2 rue le corbusier', 1, 'ROLE_ADMIN', 'v1-s@lt');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `documentation`
---
-ALTER TABLE `documentation`
-  ADD PRIMARY KEY (`id_documentation`);
-
---
--- Indexes for table `logiciels`
---
-ALTER TABLE `logiciels`
-  ADD PRIMARY KEY (`id_logiciels`);
-
---
--- Indexes for table `materiel`
---
-ALTER TABLE `materiel`
-  ADD PRIMARY KEY (`id_materiel`);
-
---
--- Indexes for table `membre`
---
-ALTER TABLE `membre`
-  ADD PRIMARY KEY (`id_membre`);
 
 --
 -- AUTO_INCREMENT for dumped tables
