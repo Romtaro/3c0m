@@ -41,7 +41,7 @@ class CheckAuthController extends Controller
 
             $test = "e";
 
-            var_dump($roles_bdd);
+            //var_dump($roles_bdd);
 
             if ($status_bdd == 1) {
                 $conte =  $this
@@ -54,7 +54,7 @@ class CheckAuthController extends Controller
                 return new Response($conte);
             } else {
                 $checker = '1';
-                var_dump($checker);
+                //var_dump($checker);
                 return $this
                 ->render('ENTSiteBundle:Membre:panelmembre.html.twig', array(
                             'pseudo' => $pseu_bdd,
