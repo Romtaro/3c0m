@@ -12,21 +12,16 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Logiciels
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
+  /**
+   * @var int
+   *
+   * @ORM\Column(name="id_logiciels", type="integer")
+   * @ORM\Id
+   * @ORM\GeneratedValue(strategy="AUTO")
+   */
     private $id;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id_logiciels", type="bigint", unique=true)
-     */
-    private $idLogiciels;
+
 
     /**
      * @var int
@@ -50,7 +45,7 @@ class Logiciels
     private $taille;
 
     /**
-     * @var \DateTime
+     * @var Date
      *
      * @ORM\Column(name="date_enregistrement", type="date")
      */
@@ -67,29 +62,6 @@ class Logiciels
         return $this->id;
     }
 
-    /**
-     * Set idLogiciels
-     *
-     * @param integer $idLogiciels
-     *
-     * @return Logiciels
-     */
-    public function setIdLogiciels($idLogiciels)
-    {
-        $this->idLogiciels = $idLogiciels;
-
-        return $this;
-    }
-
-    /**
-     * Get idLogiciels
-     *
-     * @return int
-     */
-    public function getIdLogiciels()
-    {
-        return $this->idLogiciels;
-    }
 
     /**
      * Set idCat
@@ -166,7 +138,7 @@ class Logiciels
     /**
      * Set dateEnregistrement
      *
-     * @param \DateTime $dateEnregistrement
+     * @param Date $dateEnregistrement
      *
      * @return Logiciels
      */
@@ -180,11 +152,10 @@ class Logiciels
     /**
      * Get dateEnregistrement
      *
-     * @return \DateTime
+     * @return Date
      */
     public function getDateEnregistrement()
     {
         return $this->dateEnregistrement;
     }
 }
-
