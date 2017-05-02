@@ -17,7 +17,7 @@ class DocumentationController extends Controller
        ->getManager()
        ->getRepository('ENTSiteBundle:Documentation');
 
-       $repositorylog = $this->getDoctrine()
+        $repositorylog = $this->getDoctrine()
          ->getManager()
          ->getRepository('ENTSiteBundle:Logiciels');
        //var_dump($repository);
@@ -30,7 +30,7 @@ class DocumentationController extends Controller
 
   );
 
-     $logiciels = $repositorylog->findBy(
+        $logiciels = $repositorylog->findBy(
    array('idCat' => $idCat)
 
 );
@@ -84,7 +84,7 @@ class DocumentationController extends Controller
 
 
          //var_dump($date);
-         var_dump($contnomlog);
+         //var_dump($contnomlog);
          //var_dump($conttaille);
 
         // var_dump($contdate);
@@ -95,7 +95,7 @@ class DocumentationController extends Controller
 //var_dump($content);
      // Le render ne change pas, on passait avant un tableau, maintenant un objet
 return new Response($content);
+         }
      }
     }
-}
 }
