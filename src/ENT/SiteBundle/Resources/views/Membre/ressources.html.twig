@@ -42,11 +42,11 @@
           <th width="250px" style="text-align:left;">Description</th>
         </tr>
 
-        {% for contnom in v_nom %}
+        {% for contnomlog in v_nomlog %}
           <tr class="0" style="">
             <span>
               <td style="text-align:left;">
-                {{ contnom }}
+                {{ contnomlog }}
               </td>
             </span>
           </tr>
@@ -58,11 +58,11 @@
           <th width="80px">Taille</th>
         </tr>
 
-        {% for conttaille in v_taille %}
+        {% for conttaillelog in v_taillelog %}
           <tr class="0" style="">
             <span>
               <td style="text-align:right;">
-                {{ conttaille }}
+                {{ conttaillelog }}
                 ko
               </td>
             </span>
@@ -75,11 +75,11 @@
           <th width="100px">Date</th>
         </tr>
 
-        {% for datetime in v_date %}
+        {% for datetimelog in v_datelog %}
           <tr class="0" style="">
             <span>
               <td style="text-align:right;">
-                {{ datetime.date[:10] }}
+                {{ datetimelog.date[:10] }}
               </td>
             </span>
           </tr>
