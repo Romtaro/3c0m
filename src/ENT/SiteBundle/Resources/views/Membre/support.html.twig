@@ -7,32 +7,44 @@
 
 {% endblock %}
 {% block body %}
-  <div id="test">
-    <h1>
-      {{ test|upper }}
-    </h1>
-  </div>
-{% endblock %}
-{% block body2 %}
-  <div id="ensemble">
-    <div id="centre-left">
-      <h1>04.42.50.20.20</h1>
-      <h2>support@exemple.com</h2>
-      <h3>du lundi au vendredi 9h-12h/14h-18h</h2>
-    </div>
-    <div id="centre">
-      <h1>
-        Nouveau SAV
-      </h1>
-    </div>
-    <div id="centre-r">
 
-      <h1>Suivre un SAV
-      </h1>
+  <div id="notif">
+    Attention ! Exemple de message- Exemple de message- Exemple de message- Exemple de message.
+    <a href="">
+      <i class="fa fa-times fa-2x"></i>
+    </a>
+  </div>
+
+  <div class="titlee_sup">
+    <h1>Support</h1>
+    <h4>Bienvenue
+      <strong>{{ pseudo|upper }}</strong>. Un problème avec votre équipement ? C'est ici !
+      <strong>{{ check|upper }}</strong>
+    </h4>
+  </div>
+
+  <div class="ensemble-haut">
+    <div class="centre-left">
+      04.42.50.20.20
+      <br/>support@exemple.com
+      <br/>du lundi au vendredi<br/>
+      9h-12h/14h-18h
     </div>
-    <div id="bas-l">
-      <h1>historique des SAV
-      </h1>
+    <div class="centre">
+      <h4>
+        <i class="fa fa-user-md fa-2x"></i><br/>
+        Nouveau SAV
+      </h4>
+    </div>
+    <div class="centre-right">
+      <h4>
+        <i class="fa fa-hourglass-start fa-2x"></i><br/>Suivre un SAV
+      </h4>
+    </div>
+    <div class="bas-left">
+      <h4>
+        <i class="fa fa-sort-alpha-asc fa-2x"></i><br/>Historique des SAV
+      </h4>
     </div>
   </div>
 {% endblock %}
