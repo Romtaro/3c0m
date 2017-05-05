@@ -14,6 +14,12 @@ lo_gin:
     requirements:
         _method: GET | POST
 
+lo_giin:
+    path:     /login/{idCat}
+    defaults: { _controller: ENTSiteBundle:AdminPage:admin }
+    requirements:
+        _method: GET | POST
+
 panel_membre:
     path:     /membre
     defaults: { _controller: ENTSiteBundle:PanelClient:index }
