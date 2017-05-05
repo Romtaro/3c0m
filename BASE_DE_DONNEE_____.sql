@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8000
--- Generation Time: May 02, 2017 at 09:14 AM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Client :  127.0.0.1
+-- Généré le :  Ven 05 Mai 2017 à 07:02
+-- Version du serveur :  5.7.14
+-- Version de PHP :  5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,15 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bdd`
+-- Base de données :  `bdd`
 --
-CREATE DATABASE IF NOT EXISTS `bdd` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-  USE `bdd`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `documentation`
+-- Structure de la table `documentation`
 --
 
 CREATE TABLE `documentation` (
@@ -33,12 +31,11 @@ CREATE TABLE `documentation` (
   `id_cat` int(1) DEFAULT NULL,
   `nom` varchar(40) NOT NULL,
   `taille` int(5) NOT NULL,
-  `date_enregistrement` date NOT NULL,
-  PRIMARY KEY (`id_documentation`)
+  `date_enregistrement` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `documentation`
+-- Contenu de la table `documentation`
 --
 
 INSERT INTO `documentation` (`id_documentation`, `id_cat`, `nom`, `taille`, `date_enregistrement`) VALUES
@@ -61,7 +58,7 @@ INSERT INTO `documentation` (`id_documentation`, `id_cat`, `nom`, `taille`, `dat
 -- --------------------------------------------------------
 
 --
--- Table structure for table `logiciels`
+-- Structure de la table `logiciels`
 --
 
 CREATE TABLE `logiciels` (
@@ -69,12 +66,11 @@ CREATE TABLE `logiciels` (
   `id_cat` int(1) DEFAULT NULL,
   `nom` varchar(40) NOT NULL,
   `taille` int(5) NOT NULL,
-  `date_enregistrement` date NOT NULL,
-  PRIMARY KEY (`id_logiciels`)
+  `date_enregistrement` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `logiciels`
+-- Contenu de la table `logiciels`
 --
 
 INSERT INTO `logiciels` (`id_logiciels`, `id_cat`, `nom`, `taille`, `date_enregistrement`) VALUES
@@ -97,11 +93,10 @@ INSERT INTO `logiciels` (`id_logiciels`, `id_cat`, `nom`, `taille`, `date_enregi
 (17, 1, 'exemple-logiciel.exe', 2897, '2017-05-14'),
 (18, 1, 'exemple-logiciel.exe', 2897, '2017-05-14');
 
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `materiel`
+-- Structure de la table `materiel`
 --
 
 CREATE TABLE `materiel` (
@@ -109,12 +104,11 @@ CREATE TABLE `materiel` (
   `id_membre` int(3) NOT NULL,
   `id_cat` int(1) NOT NULL,
   `nom` varchar(40) NOT NULL,
-  `number` varchar(20) NOT NULL,
-  PRIMARY KEY (`id_materiel`)
+  `number` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `materiel`
+-- Contenu de la table `materiel`
 --
 
 INSERT INTO `materiel` (`id_materiel`, `id_membre`, `id_cat`, `nom`, `number`) VALUES
@@ -123,7 +117,7 @@ INSERT INTO `materiel` (`id_materiel`, `id_membre`, `id_cat`, `nom`, `number`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `membre`
+-- Structure de la table `membre`
 --
 
 CREATE TABLE `membre` (
@@ -140,22 +134,51 @@ CREATE TABLE `membre` (
   `adresse` varchar(50) NOT NULL,
   `statut` int(1) NOT NULL DEFAULT '0',
   `is_active` varchar(100) DEFAULT 'ROLE_USER',
-  `salt` text,
-  PRIMARY KEY (`id_membre`)
+  `salt` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `membre`
+-- Contenu de la table `membre`
 --
 
 INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `tel`, `civilite`, `ville`, `code_postal`, `adresse`, `statut`, `is_active`, `salt`) VALUES
 (1, 'juju', 'soleil', 'Cottet', 'Julien', 'julien.cottet@gmail.com', 2147483647, 'm', 'Marseille', 13010, '300 rue de la chance', 0, 'ROLE_USER', 'v1-s@lt'),
-(2, 'admin', 'admin', 'ad', 'min', 'admin@gmail.com', 610672054, 'm', 'Aix', 13100, '2 rue le corbusier', 1, 'ROLE_ADMIN', 'v1-s@lt');
-
-
+(2, 'admin', 'admin', 'Ad', 'Ministrateur', 'admin@gmail.com', 610672054, 'm', 'Aix-en-Provence', 13100, '2 rue le corbusier', 1, 'ROLE_ADMIN', 'v1-s@lt');
 
 --
--- AUTO_INCREMENT for table `membre`
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `documentation`
+--
+ALTER TABLE `documentation`
+  ADD PRIMARY KEY (`id_documentation`);
+
+--
+-- Index pour la table `logiciels`
+--
+ALTER TABLE `logiciels`
+  ADD PRIMARY KEY (`id_logiciels`);
+
+--
+-- Index pour la table `materiel`
+--
+ALTER TABLE `materiel`
+  ADD PRIMARY KEY (`id_materiel`);
+
+--
+-- Index pour la table `membre`
+--
+ALTER TABLE `membre`
+  ADD PRIMARY KEY (`id_membre`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `membre`
 --
 ALTER TABLE `membre`
   MODIFY `id_membre` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
