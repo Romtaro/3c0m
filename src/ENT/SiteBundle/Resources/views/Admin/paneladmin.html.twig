@@ -22,7 +22,7 @@
 	<div id="notif">
 		Attention ! Exemple de message- Exemple de message- Exemple de message- Exemple de message.
 		<a href="">
-		{#	<i class="fa fa-times fa-2x"></i> #} 
+		{#	<i class="fa fa-times fa-2x"></i> #}
 		</a>
 	</div>
 
@@ -48,7 +48,7 @@
 						<i class="fa fa-user fa-lg" aria-hidden="true"></i>
 					</div>
 					<div class="miBb">
-						<h4>Nom client</h4>
+						<h4>{{nom}} {{prenom}}</h4>
 
 					</div>
 				</div>
@@ -57,7 +57,7 @@
 						<i class="fa fa-phone fa-lg" aria-hidden="true"></i>
 					</div>
 					<div class="miBb">
-						<h4>04.00.00.00.00</h4>
+						<h4>0{{ tel }}</h4>
 
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 						<i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
 					</div>
 					<div class="miBb">
-						<h4>support@exemple.compte</h4>
+						<h4>{{ mail }}</h4>
 
 					</div>
 				</div>
@@ -75,9 +75,9 @@
 						<i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
 					</div>
 					<div class="miBb">
-						<h4>13, rue des oliviers 13100
+						<h4>{{ adresse }}
 							<br/>
-							- Aix-en-Provence</h4>
+						{{	ville }}</h4>
 					</div>
 				</div>
 			</div>

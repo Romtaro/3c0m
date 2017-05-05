@@ -32,9 +32,16 @@ class CheckAuthController extends Controller
             //$od = fetchALL($find);
 
             $pseu_bdd = $find[0]->getPseudo();
+            $nom_bdd = $find[0]->getNom();
+            $prenom_bdd = $find[0]->getPrenom();
             $passw_bdd = $find[0]->getMdp();
+            $tel_bdd = $find[0]->getTel();
+            $mail_bdd = $find[0]->getEmail();
             $status_bdd = $find[0]->getStatut();
             $roles_bdd = $find[0]->getRoles();
+            $adresse_bdd = $find[0]->getAdresse();
+            $ville_bdd = $find[0]->getVille();
+
 
             $enabled = isset($attributes['enabled']) ? $attributes['enabled'] : true;
 
@@ -47,6 +54,15 @@ class CheckAuthController extends Controller
                 $conte =  $this
                   ->render('ENTSiteBundle:Admin:paneladmin.html.twig', array(
                           'pseudo' => $pseu_bdd,
+                          'nom' => $nom_bdd,
+                          'prenom' => $prenom_bdd,
+                          'password' => $passw_bdd,
+                          'tel' => $tel_bdd,
+                          'mail' => $mail_bdd,
+                          'status' => $status_bdd,
+                          'roles' => $roles_bdd,
+                          'adresse' => $adresse_bdd,
+                          'ville' => $ville_bdd,
                           'status' => $authenticationUtils->getLastAuthenticationError(),
                           'check' => $checker,
                         ));
@@ -54,7 +70,7 @@ class CheckAuthController extends Controller
                 return new Response($conte);
             } else {
                 $checker = '1';
-                //var_dump($checker);
+                var_dump($request);
                 return $this
                 ->render('ENTSiteBundle:Membre:panelmembre.html.twig', array(
                             'pseudo' => $pseu_bdd,
