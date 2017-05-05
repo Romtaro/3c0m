@@ -26,6 +26,8 @@ class CheckAuthController extends Controller
             $pseu = $contact->getPseudo();
             $passw = $contact->getMdp();
             $sess = $request->getSession();
+
+
             $find = $repository->findBy(array('pseudo' => $pseu, ));
             //$od = fetchALL($find);
 

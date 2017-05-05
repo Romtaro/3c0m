@@ -13,6 +13,8 @@ security:
                     admin:
                           password: admin
                           roles: 'ROLE_ADMIN'
+        webservice:
+            id: app.webservice_user_provider
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -26,7 +28,7 @@ security:
             pattern: ^/admin
             http_basic:
                 realm: "Administration"
-                provider: in_memory
+                provider: webservice
             logout:
                 invalidate_session: true
                 path: /logout

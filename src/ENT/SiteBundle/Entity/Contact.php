@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Contact
  *
- * @ORM\Table(name="membre")
+ * @ORM\Table(name="security_user_web_service_user")
  * @ORM\Entity(repositoryClass="ENT\SiteBundle\Repository\ContactRepository")
  */
 class Contact

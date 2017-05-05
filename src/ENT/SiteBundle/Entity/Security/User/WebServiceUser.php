@@ -1,16 +1,16 @@
 <?php
 
-namespace ENT\SiteBundle\Entity;
+namespace ENT\SiteBundle\Entity\Security\User;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Membre
+ * WebServiceUser
  *
  * @ORM\Table(name="security_user_web_service_user")
- * @ORM\Entity(repositoryClass="ENT\SiteBundle\Repository\MembreRepository")
+ * @ORM\Entity(repositoryClass="ENT\SiteBundle\Repository\Security\User\WebServiceUserRepository")
  */
-class Membre
+class WebServiceUser
 {
     /**
      * @var int
@@ -59,28 +59,28 @@ class Membre
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=50, unique=true)
+     * @ORM\Column(name="email", type="string", length=50)
      */
     private $email;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="tel", type="bigint", unique=true)
+     * @ORM\Column(name="tel", type="bigint")
      */
     private $tel;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="civilite", type="string", length=20)
+     * @ORM\Column(name="civilite", type="string", length=15)
      */
     private $civilite;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="ville", type="string", length=40)
+     * @ORM\Column(name="ville", type="string", length=20)
      */
     private $ville;
 
@@ -94,16 +94,30 @@ class Membre
     /**
      * @var string
      *
-     * @ORM\Column(name="adresse", type="string", length=100)
+     * @ORM\Column(name="adresse", type="string", length=50)
      */
     private $adresse;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="statut", type="smallint")
+     * @ORM\Column(name="statut", type="smallint", unique=true)
      */
     private $statut;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="is_active", type="boolean")
+     */
+    private $isActive;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="salt", type="text")
+     */
+    private $salt;
 
 
     /**
@@ -121,7 +135,7 @@ class Membre
      *
      * @param integer $idMembre
      *
-     * @return Membre
+     * @return WebServiceUser
      */
     public function setIdMembre($idMembre)
     {
@@ -145,7 +159,7 @@ class Membre
      *
      * @param string $pseudo
      *
-     * @return Membre
+     * @return WebServiceUser
      */
     public function setPseudo($pseudo)
     {
@@ -169,7 +183,7 @@ class Membre
      *
      * @param string $mdp
      *
-     * @return Membre
+     * @return WebServiceUser
      */
     public function setMdp($mdp)
     {
@@ -193,7 +207,7 @@ class Membre
      *
      * @param string $nom
      *
-     * @return Membre
+     * @return WebServiceUser
      */
     public function setNom($nom)
     {
@@ -217,7 +231,7 @@ class Membre
      *
      * @param string $prenom
      *
-     * @return Membre
+     * @return WebServiceUser
      */
     public function setPrenom($prenom)
     {
@@ -241,7 +255,7 @@ class Membre
      *
      * @param string $email
      *
-     * @return Membre
+     * @return WebServiceUser
      */
     public function setEmail($email)
     {
@@ -265,7 +279,7 @@ class Membre
      *
      * @param integer $tel
      *
-     * @return Membre
+     * @return WebServiceUser
      */
     public function setTel($tel)
     {
@@ -289,7 +303,7 @@ class Membre
      *
      * @param string $civilite
      *
-     * @return Membre
+     * @return WebServiceUser
      */
     public function setCivilite($civilite)
     {
@@ -313,7 +327,7 @@ class Membre
      *
      * @param string $ville
      *
-     * @return Membre
+     * @return WebServiceUser
      */
     public function setVille($ville)
     {
@@ -337,7 +351,7 @@ class Membre
      *
      * @param integer $codePostal
      *
-     * @return Membre
+     * @return WebServiceUser
      */
     public function setCodePostal($codePostal)
     {
@@ -361,7 +375,7 @@ class Membre
      *
      * @param string $adresse
      *
-     * @return Membre
+     * @return WebServiceUser
      */
     public function setAdresse($adresse)
     {
@@ -385,7 +399,7 @@ class Membre
      *
      * @param integer $statut
      *
-     * @return Membre
+     * @return WebServiceUser
      */
     public function setStatut($statut)
     {
@@ -403,4 +417,53 @@ class Membre
     {
         return $this->statut;
     }
+
+    /**
+     * Set isActive
+     *
+     * @param boolean $isActive
+     *
+     * @return WebServiceUser
+     */
+    public function setIsActive($isActive)
+    {
+        $this->isActive = $isActive;
+
+        return $this;
+    }
+
+    /**
+     * Get isActive
+     *
+     * @return bool
+     */
+    public function getIsActive()
+    {
+        return $this->isActive;
+    }
+
+    /**
+     * Set salt
+     *
+     * @param string $salt
+     *
+     * @return WebServiceUser
+     */
+    public function setSalt($salt)
+    {
+        $this->salt = $salt;
+
+        return $this;
+    }
+
+    /**
+     * Get salt
+     *
+     * @return string
+     */
+    public function getSalt()
+    {
+        return $this->salt;
+    }
 }
+
